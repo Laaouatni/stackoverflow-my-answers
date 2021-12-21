@@ -1,0 +1,46 @@
+.plates {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 20px;
+    width: 512px;
+    height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.course_icon {
+    width: 36px;
+    height: 36px;
+}
+
+.full_course {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+.MathPhys {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+.course {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: normal;
+    margin: 0rem 0rem;
+    display: flex;
+    align-items: center;
+    padding: 2px 40px;
+}
+
+.course h3 {
+    padding: 0rem 1rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}

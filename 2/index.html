@@ -1,0 +1,46 @@
+<div class="navigation">
+    <ul>
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Register</li>
+        <li>Contact Us</li>
+    </ul>
+</div>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        --nav-height: 2rem;
+    }
+    
+    .navigation {
+        background-color: black;
+        display: flex;
+        overflow: hidden;
+        height: var(--nav-height);
+        align-items: center;
+    }
+    
+    .navigation li {
+        display: inline;
+        color: white;
+        padding: 10px;
+        list-style: none;
+        font-size: 1.5rem;
+    }
+    
+    .navigation::before {
+        position: absolute;
+        content: "";
+        opacity: 0.5;
+        background: url('http://placekitten.com/200/200');
+        background-size: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--nav-height);
+    }
+</style>
+
+</html>

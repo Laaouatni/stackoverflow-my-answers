@@ -1,0 +1,29 @@
+.border-box {
+    background: #16171C;
+    border-left: 3px solid #B1D0E0;
+    border-right: 3px solid #FF8E00;
+    border-top: 3px solid #E9039B;
+    border-radius: 93% 7% 94% 6% / 7% 92% 8% 93%;
+    animation: anim 5s linear infinite;
+    height: 5em;
+    will-change: border-radius, scroll-position;
+}
+
+@keyframes anim {
+    100%,
+    0% {
+        border-radius: 93% 7% 94% 6% / 7% 92% 8% 92%;
+    }
+    20% {
+        border-radius: 93% 7% 92% 9% / 11% 91% 9% 94%;
+    }
+    40% {
+        border-radius: 89% 11% 91% 9% / 10% 89% 11% 90%;
+    }
+    60% {
+        border-radius: 91% 9% 93% 11% / 9% 93% 5% 90%;
+    }
+    80% {
+        border-radius: 93% 8% 95% 7% / 9% 91% 8% 93%;
+    }
+}
