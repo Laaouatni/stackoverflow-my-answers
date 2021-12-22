@@ -1,0 +1,58 @@
+/* Extra small devices*/
+
+@media only screen and (max-width: 600px) {
+    body {
+        background: red;
+    }
+    .info::after {
+        content: "Extra Small Screen";
+    }
+}
+
+
+/* Small devices  */
+
+@media only screen and (min-width: 600px) {
+    body {
+        background: orange;
+    }
+    .info::after {
+        content: "Small";
+    }
+}
+
+
+/* Medium devices  */
+
+@media only screen and (min-width: 768px) {
+    body {
+        background: lightgray;
+    }
+    .info::after {
+        content: "Medium";
+    }
+}
+
+
+/* Large devices*/
+
+@media only screen and (min-width: 992px) {
+    body {
+        background: lightgray;
+    }
+    .info::after {
+        content: "Large";
+    }
+}
+
+
+/* Extra large device */
+
+@media only screen and (min-width: 1200px) {
+    body {
+        background: lightgray;
+    }
+    .info::after {
+        content: "Extra large";
+    }
+}

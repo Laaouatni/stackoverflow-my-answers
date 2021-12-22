@@ -1,0 +1,32 @@
+* {
+    /* big font */
+    --first-Bigfont-size: 12.5rem;
+    --second-Bigfont-size: 13.5rem;
+    /* small font */
+    --first-SmallFont-size: 5rem;
+    --second-SmallFont-size: 6rem;
+}
+
+h1#title {
+    font-size: 12.5rem;
+    letter-spacing: 0;
+    transition-duration: 1s;
+}
+
+
+/* 
+h1.title:hover {
+    font-size: 13.5rem;
+    letter-spacing: 1rem;
+    transition-duration: 0.3s;
+}
+ */
+
+@keyframes animate {
+    from {
+        color: black;
+    }
+    to {
+        color: red;
+    }
+}

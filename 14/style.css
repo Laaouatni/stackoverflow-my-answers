@@ -3,9 +3,11 @@ body {
 }
 
 .overlay_ {
-    position: absolute;
-    width: 100%;
+    position: fixed;
+    width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.9);
     z-index: 9999;
+    top: 0;
+    left: 0;
 }
