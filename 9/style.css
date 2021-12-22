@@ -1,0 +1,9 @@
+.socials {
+    display: grid;
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+}
+
+.social svg {
+    fill: blue;
+}

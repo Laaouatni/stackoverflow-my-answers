@@ -1,0 +1,25 @@
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 350px;
+    width: 300px;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+.wrapper header.active {
+    cursor: move;
+    user-select: none;
+}
+
+#imgPrime {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    max-width: 350px;
+    width: 300px;
+}
