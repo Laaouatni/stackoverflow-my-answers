@@ -1,0 +1,15 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.cell {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    border: 1px solid rgb(30, 255, 0);
+}

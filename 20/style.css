@@ -1,0 +1,21 @@
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+#r0 {
+    min-height: 200px;
+    min-width: 200px;
+    color: white;
+    background: blue;
+}
+
+#r0 {
+    --rotation: 100deg;
+    transform: rotateZ(var(--rotation));
+}
+
+#r0-inner {
+    transform: rotatez(calc(var(--rotation) * -1));
+}

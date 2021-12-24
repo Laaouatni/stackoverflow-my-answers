@@ -1,0 +1,22 @@
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 0.5rem;
+}
+
+.row {
+    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: 3fr 5fr 3fr;
+}
+
+nav,
+.row>div {
+    border-radius: 0.3em;
+    border: 1px solid rgb(0, 51, 255);
+}
+
+.col-3 {
+    overflow: scroll;
+}

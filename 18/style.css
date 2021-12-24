@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://laaouatni.github.io/w11-clone/images/1dark.jpg");
+    background-position: center;
+    background-size: cover;
+}
