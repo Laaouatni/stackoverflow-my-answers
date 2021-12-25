@@ -1,0 +1,48 @@
+body {
+    text-align: center;
+}
+
+*,
+ ::before,
+ ::after {
+    box-sizing: border-box;
+}
+
+.slider-container {
+    width: 800px;
+    background-color: pink;
+    display: grid;
+}
+
+.slider-track {
+    display: flex;
+    background-color: burlywood;
+    transition: 0.2s;
+}
+
+.slider-item {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.slider-item button {
+    display: block;
+    margin: 10px auto;
+    width: 500px;
+    position: sticky;
+    top: 10px;
+}
+
+
+/* .slider-item:nth-child(3n + 1) {
+    background-color: red;
+  }
+  
+  .slider-item:nth-child(3n + 2) {
+    background-color: green;
+  }
+  
+  .slider-item:nth-child(3n + 3) {
+    background-color: blue;
+  } */
