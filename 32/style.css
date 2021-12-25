@@ -8,18 +8,27 @@ body {
 .calendar {
     display: grid;
     gap: 0.5em;
-    height: 70vh;
-    width: 70vh;
+    height: 80vh;
+    width: 80vh;
 }
 
 .day {
-    border: 2px solid black;
+    border: 2px solid goldenrod;
     padding: 0.1em;
+    display: grid;
+    place-items: center;
+    border-radius: 0.3em;
+    transition-duration: 1s;
+}
+
+.day:hover {
+    background-color: goldenrod;
+    color: white;
+    transition-duration: 0.5s;
 }
 
 .day1 {
     grid-column: 1/2;
-    grid-row: 1/2;
 }
 
 .day2 {
@@ -40,7 +49,6 @@ body {
 
 .day6 {
     grid-column: 1/2;
-    grid-row: 2/3;
 }
 
 .day7 {
@@ -61,7 +69,6 @@ body {
 
 .day11 {
     grid-column: 1/2;
-    grid-row: 3/4;
 }
 
 .day12 {
@@ -82,7 +89,6 @@ body {
 
 .day16 {
     grid-column: 1/2;
-    grid-row: 4/6;
 }
 
 .day17 {
@@ -103,7 +109,6 @@ body {
 
 .day21 {
     grid-column: 1/2;
-    grid-row: 6/7;
 }
 
 .day22 {
