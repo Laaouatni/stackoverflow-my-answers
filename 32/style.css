@@ -28,26 +28,52 @@
     grid-column: 6/7;
 }
 
-.day6 {}
+.day6 {
+    grid-column: 1/2;
+}
 
-.day7
+.day7 {
+    grid-column: 2/3;
 }
-.day8
+
+.day8 {
+    grid-column: 3/5;
 }
-.day9 {}
-.day10 {}
+
+.day9 {
+    grid-column: 5/6;
+}
+
+.day10 {
+    grid-column: 6/7;
+}
+
 .day11 {}
+
 .day12 {}
+
 .day13 {}
+
 .day14 {}
+
 .day15 {}
+
 .day16 {}
+
 .day17 {}
+
 .day18 {}
+
 .day19 {}
+
 .day20 {}
+
 .day21 {}
+
 .day22 {}
+
 .day23 {}
+
 .day24 {}
+
 .day25 {}
