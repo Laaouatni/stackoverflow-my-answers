@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+}
+
+nav {
+    background-color: rgba(0, 0, 255, 0.172);
+    border-bottom: 1px solid blue;
+    padding: 0.5em 0;
+    display: grid;
+    place-items: center;
+}
+
+nav input[type="text"] {
+    font-size: 1.5em;
+    border-radius: 2em;
+    border: none;
+    color: white;
+    width: 1.5em;
+    transition-duration: 0.5s;
+}
+
+nav input[type="text"]:hover,
+nav input[type="text"]:focus {
+    width: calc(90vw - 2em);
+    color: rgb(0, 51, 255);
+    border-radius: 0.2em;
+    transition-duration: 1s;
+    padding: 0 2em 0 0;
+}
+
+input[type="text"]:hover~svg,
+input[type="text"]:focus~svg {
+    right: 10px;
+}
+
+nav #content {
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+}
+
+#content svg {
+    width: 1.5em;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    z-index: 1;
+}
+
+#content {
+    position: relative;
+}
