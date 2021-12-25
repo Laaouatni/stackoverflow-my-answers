@@ -13,7 +13,7 @@ body {
 }
 
 .day {
-    border: 2px solid goldenrod;
+    border: 3px solid goldenrod;
     padding: 0.1em;
     display: grid;
     place-items: center;
@@ -29,6 +29,7 @@ body {
 
 .day1 {
     grid-column: 1/2;
+    margin: 0 0 -2vh 0;
 }
 
 .day2 {
@@ -41,6 +42,7 @@ body {
 
 .day4 {
     grid-column: 5/6;
+    margin: 0 0 -6vh 0;
 }
 
 .day5 {
@@ -49,6 +51,7 @@ body {
 
 .day6 {
     grid-column: 1/2;
+    margin: 2vh 0 0 0;
 }
 
 .day7 {
@@ -61,6 +64,7 @@ body {
 
 .day9 {
     grid-column: 5/6;
+    margin: 6vh 0 0 0;
 }
 
 .day10 {
@@ -101,6 +105,7 @@ body {
 
 .day19 {
     grid-column: 5/6;
+    margin: 0 0 -3vh 0;
 }
 
 .day20 {
@@ -121,6 +126,7 @@ body {
 
 .day24 {
     grid-column: 5/6;
+    margin: 3vh 0 0 0;
 }
 
 .day25 {
