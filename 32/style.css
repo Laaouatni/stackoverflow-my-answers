@@ -1,6 +1,7 @@
 .calendar {
     display: grid;
     gap: 0.5em;
+    height: 90vh;
 }
 
 .day {
@@ -10,6 +11,7 @@
 
 .day1 {
     grid-column: 1/2;
+    grid-row: 1/2;
 }
 
 .day2 {
@@ -30,6 +32,7 @@
 
 .day6 {
     grid-column: 1/2;
+    grid-row: 2/3;
 }
 
 .day7 {
@@ -50,6 +53,7 @@
 
 .day11 {
     grid-column: 1/2;
+    grid-row: 3/4;
 }
 
 .day12 {
@@ -70,6 +74,7 @@
 
 .day16 {
     grid-column: 1/2;
+    grid-row: 4/6;
 }
 
 .day17 {
@@ -90,6 +95,7 @@
 
 .day21 {
     grid-column: 1/2;
+    grid-row: 6/7;
 }
 
 .day22 {
