@@ -68,22 +68,42 @@
     grid-column: 6/7;
 }
 
-.day16 {}
+.day16 {
+    grid-column: 1/2;
+}
 
-.day17 {}
+.day17 {
+    grid-column: 2/3;
+}
 
-.day18 {}
+.day18 {
+    grid-column: 3/5;
+}
 
-.day19 {}
+.day19 {
+    grid-column: 5/6;
+}
 
-.day20 {}
+.day20 {
+    grid-column: 6/7;
+}
 
-.day21 {}
+.day21 {
+    grid-column: 1/2;
+}
 
-.day22 {}
+.day22 {
+    grid-column: 2/4;
+}
 
-.day23 {}
+.day23 {
+    grid-column: 4/5;
+}
 
-.day24 {}
+.day24 {
+    grid-column: 5/6;
+}
 
-.day25 {}
+.day25 {
+    grid-column: 6/7;
+}
