@@ -1,0 +1,19 @@
+.square {
+    margin: 1vh;
+    height: 3vh;
+    width: 3vh;
+    background-color: none;
+    border: solid 2px grey;
+}
+
+.fill {
+    background-color: grey;
+}
+
+.hidText {
+    display: none;
+}
+
+.display {
+    display: all;
+}
