@@ -1,7 +1,15 @@
+body {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+}
+
 .calendar {
     display: grid;
     gap: 0.5em;
-    height: 90vh;
+    height: 70vh;
+    width: 70vh;
 }
 
 .day {
