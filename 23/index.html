@@ -10,22 +10,22 @@
 
     <form id="form1">
         Type radient of circle:
-        <input type="text" name="txtr" size=1 0>
+        <input type="text" name="txtr" id="r-input" value="10">
         <br>
         <input type="button" value="Calculate" onclick="CalculateArea()">
         <p id="area">
         </p>
     </form>
 
-    <script type="text/javascript">
+    <script type="text/javascript ">
         function CalculateArea() {
-
-            var r = document.getElementById(' form1 ').value;
-            let p = document.getElementById('area ')
+            var r = document.getElementById('r-input').value;
+            let p = document.getElementById('area');
             var area = (r * r * Math.PI);
-
             if (r % 1 != 0 || r < 1) {
-                p.innerHTML = 'Please enter a whole number greater than 0 ';
+                p.innerHTML = 'Please enter a whole number greater than 0';
+                console.log("r " + r);
+                console.log("area " + area);
             } else {
                 p.innerHTML = area;
             }

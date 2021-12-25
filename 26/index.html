@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p>Click to start .</p>
+    <button onclick="myFunction()">Start</button>
+    <p id="a"></p>
+    <p id="p"></p>
+    <p id="v"></p>
+    <script>
+        function myFunction() {
+
+            var a = prompt("Type a.");
+            var b = prompt("Type b.");
+            var c = prompt("Type c");
+
+
+            var area = 2 * (a * b + a * c + b * c);
+
+            document.getElementById("a").innerHTML =
+                "Area of square:" + area;
+        }
+
+        if (r % 1 != 0 || r < 1) {
+            p.innerHTML = "<span style='color:#FF0000'>Only whole numbers can be inserted!</span>";
+        } else {
+            p.innerHTML = area;
+        }
+    </script>
+</body>
+
+</html>

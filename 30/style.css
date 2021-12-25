@@ -1,0 +1,31 @@
+body {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.myImg {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url(https://laaouatni.github.io/w11-clone/images/1dark.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 50vh;
+    width: 80vw;
+    border: 0.2em solid blue;
+    border-radius: 0.5em;
+}
+
+.myText {
+    display: grid;
+    place-content: center;
+}

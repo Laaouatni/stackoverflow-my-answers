@@ -1,0 +1,5 @@
+div {
+    --height: 1.5em;
+    line-height: var(--height);
+    background-image: repeating-linear-gradient(transparent 0 var(--height), green var(--height) calc(var(--height) * 2));
+}

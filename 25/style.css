@@ -1,0 +1,42 @@
+* {
+    --outside-value: -0.5em;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body,
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content {
+    position: relative;
+}
+
+#content img {
+    height: 50vw;
+    z-index: 1;
+}
+
+.border {
+    width: 30vh;
+    height: 10vh;
+    position: absolute;
+    background-color: red;
+}
+
+.border-bottom {
+    top: var(--outside-value);
+    left: var(--outside-value);
+}
+
+.border-top {
+    position: absolute;
+    bottom: var(--outside-value);
+    right: var(--outside-value);
+}

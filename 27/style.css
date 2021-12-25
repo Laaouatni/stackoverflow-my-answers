@@ -1,0 +1,25 @@
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.content img {
+    width: 50vw;
+}
+
+.content {
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+#button-div {
+    position: absolute;
+    display: none;
+}
+
+.content img:hover~#button-div {
+    display: flex;
+    gap: 0.5em;
+}
