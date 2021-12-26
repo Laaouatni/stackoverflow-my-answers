@@ -1,0 +1,22 @@
+body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.3em;
+}
+
+#container div {
+    border: 2px solid black;
+    border-radius: 0.2em;
+    height: 5vw;
+    width: 5vw;
+}
+
+#container div:hover {
+    background: black;
+}
