@@ -1,0 +1,31 @@
+body {
+    display: grid;
+    height: 100vh;
+    place-content: center;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+}
+
+.container div {
+    background: transparent;
+    border: 0.5em solid black;
+}
+
+.container .circle {
+    height: 10em;
+    width: 10em;
+    border-radius: 50%;
+    background-color: white;
+    border-bottom: 0.5em solid white;
+    z-index: 1;
+}
+
+.container .rectangle {
+    border: 0.5em solid black;
+    height: 2em;
+    width: 30em;
+    transform: translateY(-2.1em);
+}
