@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+}
+
+.container .image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 50vh;
+    width: 100vh;
+}
+
+.container .first-image {
+    background-image: url("https://laaouatni.github.io/w11-clone/images/1dark.jpg");
+}
+
+.container .second-image {
+    background-image: url("https://laaouatni.github.io/w11-clone/images/0light.jpg");
+}
