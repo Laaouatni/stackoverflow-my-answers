@@ -1,0 +1,23 @@
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    height: 80vh;
+    width: 80vw;
+    border: 0.5em solid black;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.container::before {
+    content: "";
+    background-color: white;
+    position: absolute;
+    left: -0.5em;
+    height: 40vh;
+    width: 0.5em;
+}

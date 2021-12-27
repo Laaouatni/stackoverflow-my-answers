@@ -1,8 +1,9 @@
 .app {
-    height: 100vh;
-    background: url('https://laaouatni.github.io/w11-clone/images/1dark.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    height: 100%;
+    background-image: url('https://i.ibb.co/pWsFM5S/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+    background-position-y: -10em;
 }
