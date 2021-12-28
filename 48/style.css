@@ -1,0 +1,67 @@
+* {
+    --nav-height: 70px;
+    --custum-blue: rgb(53, 66, 185);
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: linear-gradient( 89.8deg, rgba(222, 74, 74, 1) 4.7%, rgba(30, 29, 29, 1) 120.3%);
+}
+
+nav {
+    background: var(--custum-blue);
+    height: var(--nav-height);
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-auto-flow: column;
+    place-content: center;
+    gap: 0.1em;
+}
+
+nav>a img,
+nav>a {
+    height: calc(var(--nav-height));
+    border-radius: 0 0.5em 0.5em 0;
+}
+
+nav ul {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    font-size: 1rem;
+    place-content: center end;
+    padding-right: 0.2em;
+}
+
+nav ul li {
+    display: grid;
+    place-content: center;
+}
+
+nav ul li a {
+    color: white;
+    text-transform: uppercase;
+    height: var(--nav-height);
+    display: grid;
+    place-content: center;
+    padding: 0 1vw;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background: turquoise;
+    text-shadow: 0 .05em .1em rgb(53, 66, 185);
+    transition: .5s;
+}
+
+@media (max-width: 750px) {
+    nav ul {
+        font-size: 1.9vw;
+    }
+}
