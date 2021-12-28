@@ -1,27 +1,24 @@
+* {
+    --nav-height: 46px;
+    --img-height: calc(50vh - ((var(--nav-height)) / 2))
+}
+
 body {
     margin: 0;
+    height: 100vh;
+}
+
+nav {
+    height: var(--nav-height);
+    background: blue;
+    color: white;
 }
 
 .container {
-    height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    place-items: center;
 }
 
 .container .image {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    height: 50vh;
-    width: 100vh;
-}
-
-.container .first-image {
-    background-image: url("https://laaouatni.github.io/w11-clone/images/1dark.jpg");
-}
-
-.container .second-image {
-    background-image: url("https://laaouatni.github.io/w11-clone/images/0light.jpg");
+    height: var(--img-height);
+    width: auto;
 }
