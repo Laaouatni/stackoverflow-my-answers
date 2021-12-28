@@ -1,0 +1,43 @@
+* {
+    --input-height: 3rem;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+}
+
+.input-container input {
+    height: var(--input-height);
+    width: 80vw;
+    font-size: 2rem;
+}
+
+.input-container {
+    position: relative;
+    display: grid;
+    place-items: center start;
+}
+
+.input-container label {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.5rem;
+    color: rgb(90, 90, 90);
+    background-color: white;
+    transition-duration: 0.5s;
+}
+
+.input-container input:focus~label {
+    position: absolute;
+    font-size: 0.7rem;
+    top: -0.6rem;
+    padding: 0.2em;
+    left: 0.5rem;
+    color: rgb(0, 81, 255);
+    background-color: white;
+    transition-duration: 0.2s;
+    z-index: 2;
+}
