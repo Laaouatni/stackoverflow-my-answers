@@ -1,0 +1,10 @@
+html,
+body {
+    height: 100%;
+    margin: auto;
+    font-family: ringbearer;
+    background: #152323;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    color: white!important;
+}
