@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    max-width: 75rem;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #100e3e;
+}
+
+.navbar {
+    padding-top: 2.2rem;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    font-size: clamp(0.7rem, 1.2vw, 1.2rem);
+}
+
+.nav-link {
+    margin-right: 3.7rem;
+    position: relative;
+    padding-bottom: 1rem;
+    transition: all 0.3s ease;
+    color: #7f7e9c;
+}
+
+.nav-link:last-child {
+    margin-right: 0;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.521);
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.nav-link a:hover {
+    color: white;
+}
+
+.one {
+    border-bottom: 2px solid #049cff;
+}
+
+.one:hover {
+    border-bottom: 2px solid #49b4fc;
+}
+
+.one::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: -1.7rem;
+    width: 4rem;
+    background-color: #049cff;
+    height: 2px;
+    z-index: -1;
+}
+
+.one::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 4rem;
+    background: linear-gradient( 90deg, rgba(4, 156, 240, 1) 0%, rgba(71, 88, 188, 1) 100%);
+    height: 2px;
+    z-index: -1;
+}
+
+.two {
+    border-bottom: 2px solid #4758bc;
+}
+
+.two:hover {
+    border-bottom: 2px solid #435fff;
+}
+
+.two::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 4rem;
+    background: linear-gradient( 90deg, rgba(71, 88, 188, 1) 0%, rgba(99, 27, 177, 1) 100%);
+    height: 2px;
+    z-index: -1;
+}
+
+.three {
+    border-bottom: 2px solid #631bb1;
+}
+
+.three:hover {
+    border-bottom: 2px solid #8b1fff;
+}
+
+.three::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 4rem;
+    background: linear-gradient( 90deg, rgba(99, 27, 177, 1) 0%, rgba(230, 64, 103, 1) 100%);
+    height: 2px;
+    z-index: -1;
+}
+
+.four {
+    border-bottom: 2px solid #e64067;
+}
+
+.four:hover {
+    border-bottom: 2px solid #ff0842;
+}
+
+.four::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 1.8rem;
+    background-color: #e64067;
+    height: 2px;
+    z-index: -1;
+}
+
+.active {
+    color: white;
+}
+
+@media only screen and (max-width: 663px) {
+    .one::before {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: -1.1rem;
+        width: 4rem;
+        background-color: #049cff;
+        height: 2px;
+        z-index: -1;
+    }
+    .nav-link {
+        margin-right: 1.7rem;
+    }
+    .four::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        width: 1rem;
+        background-color: #e64067;
+        height: 2px;
+        z-index: -1;
+    }
+}
