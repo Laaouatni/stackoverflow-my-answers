@@ -1,0 +1,47 @@
+* {
+    --input-height: 3rem;
+    --light-black: rgba(0, 0, 0, 0.3);
+    --medium-black: rgba(0, 0, 0, 0.6);
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+}
+
+.input-container input {
+    height: var(--input-height);
+    width: 80vw;
+    font-size: 2rem;
+    border: none;
+    border-bottom: 2px solid var(--light-black);
+}
+
+.input-container {
+    position: relative;
+    display: grid;
+    place-items: center start;
+}
+
+.input-container label {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.5rem;
+    color: var(--medium-black);
+    transition-duration: 0.5s;
+}
+
+.input-container input:focus~label {
+    position: absolute;
+    font-size: 1rem;
+    top: -1rem;
+    left: 0;
+    transition-duration: 0.2s;
+    z-index: 2;
+}
+
+.input-container input:focus {
+    outline: none;
+}
