@@ -1,0 +1,28 @@
+.col-layout {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-content: stretch;
+    background-color: #999;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.header {
+    background-color: #ff5c61;
+}
+
+.table-wrapper {
+    background-color: black;
+    padding: 10px;
+    height: 100%;
+}
+
+.table {
+    background-color: #4cd1a4;
+}
+
+.footer {
+    background-color: #5ebeff;
+}
