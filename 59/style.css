@@ -1,0 +1,25 @@
+* {
+    --my-orange: rgb(255, 166, 0);
+}
+
+.timeline-container {
+    margin-left: 2em;
+}
+
+.timeline-container .timeline {
+    width: 5px;
+    height: 100vh;
+    background: var(--my-orange);
+}
+
+.checkpoint {
+    border: 3px solid var(--my-orange);
+    padding: 0.5rem;
+    width: 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    transform: translateX(-1.5rem);
+    background: white;
+    position: relative;
+    top: calc(20vh* var(--i))
+}
