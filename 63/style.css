@@ -1,0 +1,8 @@
+body div {
+    border: 1px solid blue;
+    background: rgba(0, 0, 255, 0.261);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 0.3em;
+}
