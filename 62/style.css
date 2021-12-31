@@ -1,0 +1,35 @@
+* {
+    --bg-color-blue: #252734;
+    --gold-orange: #e9b258;
+}
+
+body {
+    background-color: var(--bg-color-blue);
+}
+
+.experience,
+.clients {
+    color: var(--gold-orange);
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.number {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.number-text {
+    float: right;
+    padding-left: 10px;
+    color: white;
+    /* here the trick */
+    position: relative;
+    top: 0.8rem;
+}
+
+.row {
+    display: flex;
+}
