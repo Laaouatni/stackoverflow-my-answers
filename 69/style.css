@@ -1,0 +1,24 @@
+#five {
+    position: fixed;
+    top: 10px;
+    right: 100px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#five:hover {
+    text-shadow: 5px 5px 5px red;
+}
+
+
+/* this what I added */
+
+#five a {
+    text-decoration: none;
+    color: red;
+}
+
+#five:hover a {
+    color: black;
+}
