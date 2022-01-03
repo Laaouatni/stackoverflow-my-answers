@@ -1,0 +1,30 @@
+nav {
+    background-color: #B0B5BD;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
+}
+
+.nav_buttons {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    gap: 1rem;
+}
+
+.search-box {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+nav svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+#btn_search {
+    margin: 0 0.3rem;
+}
+
+nav input {
+    width: 100%;
+}
