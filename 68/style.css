@@ -1,0 +1,40 @@
+#container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5vw;
+    padding: 1em;
+}
+
+.card>:nth-child(1) img {
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.card-details>div:nth-child(1) {
+    display: grid;
+}
+
+.card-details span:nth-child(1) {
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+
+.card-details span:nth-child(2) {
+    font-size: 1.5vw;
+}
+
+.card-links img {
+    height: 1.3rem;
+    margin-top: 0.5em;
+    cursor: pointer;
+}
+
+.card-links {
+    display: flex;
+    gap: 0.5rem;
+}
