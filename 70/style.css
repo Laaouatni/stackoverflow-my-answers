@@ -1,0 +1,25 @@
+::-webkit-input-placeholder::first-letter {
+    color: red;
+    border-bottom: 1px solid red;
+    text-decoration: underline;
+}
+
+::-moz-placeholder::first-letter {
+    color: red;
+    text-decoration: underline;
+}
+
+::-ms-input-placeholder:first-letter {
+    color: red;
+    text-decoration: underline;
+}
+
+::-o-input-placeholder::first-letter {
+    color: red;
+    text-decoration: underline;
+}
+
+::placeholder::first-letter {
+    color: red;
+    text-decoration: underline;
+}
