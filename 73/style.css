@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* here the trick */
+    --end-position: calc(-100px * var(--i));
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.container {
+    background-color: red;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* use the DRY method (Dont Repeat Yourself) */
+
+.container img:hover {
+    transition: 3s;
+    /* one time for all, that's easy! and fast*/
+    transform: translate(var(--end-position), 200px);
+}
