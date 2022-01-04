@@ -2,6 +2,10 @@
     --linkedin-blue: #0e76a8;
 }
 
+body {
+    margin: 0;
+}
+
 .navbar {
     background-color: black;
     color: white;
@@ -61,18 +65,15 @@ h3 {
 }
 
 .pretty {
-    background-color: #0e76a8;
+    background-color: var(--linkedin-blue);
     color: White;
     padding: 20px;
     text-align: center;
-    position: relative;
-    left: 42.5%;
-    top: 25px;
     text-decoration: none;
+    display: grid;
+    place-content: center;
 }
 
 .bg-orange {
     background-color: orange;
 }
-
-.container
