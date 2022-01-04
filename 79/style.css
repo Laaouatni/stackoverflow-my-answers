@@ -19,7 +19,12 @@ body {
 
 #header div {
     display: flex;
-    gap: 1rem;
+    gap: 0.5vw;
+}
+
+#header a {
+    color: white;
+    text-decoration: none;
 }
 
 #email-div>div:first-child,
