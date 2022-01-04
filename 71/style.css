@@ -1,0 +1,61 @@
+* {
+    --modulo-height: 50px;
+}
+
+.box5x9 {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #15110F;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+}
+
+.modulo,
+.modEsp {
+    background: #121110;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 0.7em;
+    text-align: center;
+    width: var(--modulo-height);
+    height: var(--modulo-height);
+    margin: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 2px solid #342F28;
+}
+
+.modulo,
+.marca,
+.desmarca {
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+}
+
+.modulo:hover,
+.marca:hover,
+.desmarca:hover {
+    background: #5555554b !important;
+}
+
+.modulo {
+    position: relative;
+}
+
+.modulo img {
+    /* since the modulo have */
+    height: var(--modulo-height);
+    /* the image now follow the parent box*/
+    position: absolute;
+    /* will center the image, in the middle of 2 the boxes */
+    top: calc(var(--modulo-height) / 2);
+    /* you change also to 50%, if is 50px also the image, otherwise use the calc if the image is larger or smaller */
+    z-index: 1;
+}
