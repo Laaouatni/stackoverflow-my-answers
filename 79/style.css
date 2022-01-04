@@ -77,6 +77,7 @@ h3 {
     text-decoration: none;
     display: grid;
     place-content: center;
+    cursor: pointer;
 }
 
 .bg-orange {
