@@ -25,15 +25,26 @@ h3 {
     color: orange;
 }
 
+.container h3 {
+    display: grid;
+    place-content: center;
+}
+
 .weight {
     font-weight: bold;
 }
 
 .container {
     display: grid;
+    background-color: white;
+    margin: 0 5rem;
+    padding: 2rem;
 }
 
-#skills ul {
+#skills ul,
+#experience ul,
+#education ul,
+#aws-section ul {
     display: grid;
     gap: 0.5rem;
 }
@@ -41,9 +52,27 @@ h3 {
 .space-between {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .vertical-gap {
     display: grid;
     gap: 1rem;
 }
+
+.pretty {
+    background-color: #0e76a8;
+    color: White;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    left: 42.5%;
+    top: 25px;
+    text-decoration: none;
+}
+
+.bg-orange {
+    background-color: orange;
+}
+
+.container
