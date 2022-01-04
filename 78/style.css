@@ -1,0 +1,29 @@
+img {
+    /* for make the image with the max-height and max-width (so it will work on mobile and pc) */
+    height: 100vh;
+    width: 100vw;
+    /* for making the background look good also in smaller devices */
+    object-fit: cover;
+    object-position: center;
+    /* trick: for making the image stay in here place, like a background image (even if user scroll) */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* for making the image to be behind the content */
+    z-index: -2;
+}
+
+body::before {
+    content: '';
+    /* for make the image with the max-height and max-width (so it will work on mobile and pc) */
+    height: 100vh;
+    width: 100vw;
+    /* trick: for making the image stay in here place, like a background image (even if user scroll) */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* for making to be behind the content, but on the image (image -2 -> ::before -1) */
+    z-index: -1;
+    /* change the alpha (number from 0 to 1)*/
+    background-color: rgba(0, 0, 0, 0.7);
+}
