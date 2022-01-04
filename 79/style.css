@@ -1,0 +1,49 @@
+* {
+    --linkedin-blue: #0e76a8;
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#header div {
+    display: flex;
+    gap: 1rem;
+}
+
+#email-div>div:first-child,
+#phone-div>div:first-child,
+#header h1,
+h3 {
+    color: orange;
+}
+
+.weight {
+    font-weight: bold;
+}
+
+.container {
+    display: grid;
+}
+
+#skills ul {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vertical-gap {
+    display: grid;
+    gap: 1rem;
+}
