@@ -1,0 +1,45 @@
+.container1 img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.text1 {
+    position: relative;
+    font-family: Ubuntu;
+    font-size: 70px;
+    margin: 0;
+    color: white;
+}
+
+.text2 {
+    position: relative;
+    font-family: Ubuntu;
+    font-size: 25px;
+    margin: 0;
+    color: white;
+}
+
+.button1 {
+    position: relative;
+    background-color: #D32A34;
+    color: white;
+    border: none;
+    width: 239px;
+    height: 71px;
+    font-size: 20px;
+}
+
+.button2 {
+    position: relative;
+    border: solid #D32A34;
+    color: white;
+    background-color: transparent;
+    width: 239px;
+    height: 71px;
+    font-size: 20px;
+}
