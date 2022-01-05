@@ -1,0 +1,38 @@
+#container img {
+    /* setting the dimensions to be responsive to device full-screen */
+    height: 100vh;
+    width: 100vw;
+    /* for making look good the image also in other dimensions */
+    object-fit: cover;
+    /* I use fixed, it won't move all other element, and be fixed like backgrounds */
+    position: fixed;
+    /*for not getting the default margin in the left and top (you can use also `body{margin: 0;}` )*/
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+nav {
+    /*margin of 30 like you writed*/
+    margin: 30px 0;
+    /*positioning*/
+    position: sticky;
+    top: 0;
+    /* setting the dimensions of the navbar */
+    width: 100%;
+    height: 3rem;
+    /* coloring the navbar*/
+    background-color: white;
+    /*centering the text*/
+    display: grid;
+    place-content: center;
+}
+
+
+/* only for debugging, you can delete it later*/
+
+body {
+    margin: 0;
+    /* so now you can scroll the page, and see what happen */
+    height: 300vh;
+}
