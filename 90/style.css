@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+}
+
+
+/* parent */
+
+ul {
+    background-color: rgb(94, 94, 94);
+}
+
+
+/* childs */
+
+li {
+    display: inline-block;
+}
