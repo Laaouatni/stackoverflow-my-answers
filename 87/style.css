@@ -1,0 +1,23 @@
+.bg-image {
+    position: relative;
+}
+
+.bg-image img {
+    /* responsive image */
+    max-width: 100%;
+    height: auto;
+}
+
+.product-links {
+    /* grid of 4 items in a columns, automatic number of rows*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* the links now are above the background (image) */
+    /* don't change: if you want to change... before using absolute, you need to set the parent to position:relative */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* the parent of links, set dimensions 100% width and height 100% (100% of the parent so the image, not the all screen) */
+    width: 100%;
+    height: 100%;
+}
