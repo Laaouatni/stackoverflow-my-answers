@@ -1,0 +1,10 @@
+body svg {
+    width: 5em;
+}
+
+
+/* color the svg, for not having this bug */
+
+.with-success svg {
+    color: black;
+}
