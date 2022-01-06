@@ -1,0 +1,38 @@
+* {
+    /*the same beautiful color in the photo you linked in stackoverflow*/
+    /*the color for the background*/
+    --bg-blue: #090f1b;
+    /* the color for the circle*/
+    --cyan: #54bec0;
+    --grey: #82858c;
+    --yellow: #ecfa75;
+    --pink: #c85b8d;
+    --purple: #9b56dc;
+    /* the color the text*/
+    --text-color: #fff;
+    --green: #38624f;
+    --white-glassmophic: rgba(255, 255, 255, 0.5);
+}
+
+body {
+    /*center the circle*/
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    /* set the background to blue*/
+    background-color: var(--bg-blue);
+}
+
+.circle {
+    /*making the circle */
+    height: 50vh;
+    width: 50vh;
+    border-radius: 50%;
+    /* creating the border and assign the color to each part*/
+    border-right: 2vh solid var(--cyan);
+    border-bottom: 2vh solid var(--purple);
+    border-left: 2vh solid var(--pink);
+    border-top: 2vh solid var(--yellow);
+    /*creating the shadow*/
+    box-shadow: 0 1vh 2vh var(--purple), 1vh 0 2vh var(--cyan), -1vh 0 2vh var(--pink), 0 -1vh 2vh var(--yellow);
+}
