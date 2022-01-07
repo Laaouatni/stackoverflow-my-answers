@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #0af, #00FF6C)
+}
+
+P {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+    font-style: italic;
+}
+
+p>input {
+    height: 15px;
+    font-size: large;
+}
+
+p>div {
+    display: block;
+    background-color: green;
+    height: 50px;
+    width: 50px;
+}
