@@ -1,0 +1,21 @@
+.blok {
+    /*height is 400px if screen is bigger*/
+    height: 400px;
+    /*aspect-ratio make the element always a square, so it set the height for us*/
+    aspect-ratio: 1;
+    /*image as background*/
+    background-image: url(https://avatars.githubusercontent.com/u/87947051?v=4);
+    background-size: contain;
+}
+
+
+/* the css-trick is here*/
+
+@media (max-height:400px) {
+    .blok {
+        height: 100vh;
+    }
+}
+
+
+/* if the width of viewport is less than the image height, the image will be 100% of height... 100vh is 100% of screen height but not of parent element */
