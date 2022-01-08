@@ -6,5 +6,5 @@
 }
 
 #titleContainer span {
-    transform: translateY(calc(var(--i) * 1px));
+    transform: translateY(calc(var(--i) * 2px));
 }

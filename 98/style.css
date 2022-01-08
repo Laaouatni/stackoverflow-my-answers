@@ -1,0 +1,25 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    border: 2px solid red;
+}
+
+section {
+    background: gold;
+    display: grid;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    gap: 1rem;
+}
+
+.box {
+    width: 50%;
+    flex-shrink: 0;
+    padding: 2rem;
+    background: gray;
+}
