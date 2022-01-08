@@ -1,0 +1,64 @@
+.short-message {
+    border: 10px solid #303030;
+    width: auto;
+    height: 370px;
+}
+
+.scroll-up {
+    height: 370px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.upper {
+    animation: scroll 30s linear infinite;
+    display: block;
+    padding-top: 370px;
+}
+
+.upper:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
+.karo {
+    color: black;
+}
+
+.headings {
+    background: #303030;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.n-p {
+    font-weight: bold;
+    color: red;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+.blink {
+    color: grey;
+    animation: blinker .7s infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
