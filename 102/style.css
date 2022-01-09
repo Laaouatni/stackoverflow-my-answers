@@ -17,7 +17,7 @@
 
 @keyframes fadeIn {
     from {
-        /* first is not visible*/
+        /* is not visible*/
         opacity: 0;
     }
     to {
