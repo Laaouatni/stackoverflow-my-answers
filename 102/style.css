@@ -1,0 +1,27 @@
+* {
+    /* this is a css variable */
+    --delay: 0.5s;
+}
+
+.el {
+    /* hidden by default */
+    opacity: 0;
+    /* shorthand -> name duration timing-function fill-mode */
+    animation: fadeIn 0.5s linear forwards;
+    /* the real trick is here */
+    animation-delay: calc(var(--delay) * var(--i));
+    /*el1 -> 0.5s * 0 = 0 */
+    /*el2 -> 0.5s * 1 = 0.5s */
+    /*el3 -> 0.5s * 2 = 1s */
+}
+
+@keyframes fadeIn {
+    from {
+        /* first is not visible*/
+        opacity: 0;
+    }
+    to {
+        /* is visible */
+        opacity: 1;
+    }
+}
