@@ -1,0 +1,19 @@
+/* 1 */
+
+input:nth-of-type(1)::-webkit-input-placeholder {
+    color: green;
+}
+
+
+/* 2 */
+
+input:nth-of-type(2)::-webkit-input-placeholder {
+    color: blue;
+}
+
+
+/* 3 */
+
+input:nth-of-type(3)::-webkit-input-placeholder {
+    color: red;
+}
