@@ -1,0 +1,97 @@
+.payment-customer-container {
+    width: 40vw;
+    padding: 1rem;
+    background-color: hsl(0, 0%, 97%);
+    border-radius: 0.5rem;
+    margin-left: 30vw;
+    margin-top: 8.5vh;
+    /* deleted margin: 80vh -> TO BECOME auto*/
+    height: auto;
+    /*align and justify don't work without display, so I putted it*/
+    /*personally I prefer grid or flex-direction: column;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-customer-header {
+    font-family: 'Heebo-Regular';
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.payment-customer-body {
+    width: 100%;
+    margin-top: 5vh;
+}
+
+.payment-customer-input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 3vh;
+    align-items: center;
+}
+
+.payment-customer-label {
+    flex: 2;
+    padding: 1rem;
+    font-family: 'heebo-light';
+    font-size: 1.2rem;
+    text-align: right;
+    direction: rtl;
+}
+
+.payment-customer-input {
+    flex: 3;
+    direction: rtl;
+    text-align: right;
+    height: 4vh;
+    border: none;
+    border-bottom: 2px solid #888;
+    background-color: hsl(0, 0%, 97%);
+}
+
+.payment-customer-input:focus {
+    outline: none;
+}
+
+.payment-customer-input::placeholder {
+    font-family: 'heebo-light';
+}
+
+.payment-customer-input:-ms-input-placeholder {
+    font-family: 'heebo-light';
+}
+
+.payment-customer::-ms-input-placeholder {
+    font-family: 'heebo-light';
+}
+
+.payment-customer-input::-moz-placeholder {
+    font-family: 'heebo-light';
+}
+
+.payment-customer-city-results-container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-customer-city-result {
+    height: 5vh;
+    line-height: calc(5vh - 1rem);
+    background-color: white;
+    padding: 0.5rem;
+    margin-top: 10px;
+    text-align: right;
+    font-family: 'heebo-light';
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.payment-customer-city-result-chevron {
+    position: absolute;
+    left: 2vw;
+}
