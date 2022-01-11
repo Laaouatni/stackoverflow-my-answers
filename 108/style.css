@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    overflow: hidden;
 }
 
 #bg-image {
@@ -15,17 +16,17 @@ body {
 #circle {
     height: 200px;
     width: 200px;
+    /* make the the div circle */
     border-radius: 50%;
+    /* important using relative for using top and left in javascript */
     position: relative;
     /* change the url with the link of image you want */
     background-image: url(https://laaouatni.github.io/w11-clone/images/0light.jpg);
-    /*making the background responsive*/
-    background-size: cover;
     /*center the background */
     background-position: center;
     background-repeat: no-repeat;
-    /* the MAGIC is  HERE in the next property */
+    /* TRICK: making the background responsive*/
+    background-size: cover;
+    /* TRICK: the MAGIC is HERE make the image fixed, so is not moving  */
     background-attachment: fixed;
-    /*the transition make everything look good*/
-    transition-duration: 0.1s;
 }
