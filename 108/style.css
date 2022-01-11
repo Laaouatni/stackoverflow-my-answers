@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+}
+
+#bg-image {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0.5em 1rem black;
+    position: relative;
+    /* here what you want */
+    background-image: url(https://laaouatni.github.io/w11-clone/images/0light.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* the magic is in the next property */
+    background-attachment: fixed;
+    /*the transition make everything look good*/
+    transition-duration: 0.1s;
+}
