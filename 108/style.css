@@ -4,24 +4,27 @@ body {
 
 #bg-image {
     position: fixed;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    /*make the background responsive*/
     object-fit: cover;
+    /* under the circle div*/
     z-index: -1;
 }
 
 #circle {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
-    box-shadow: 0 0.5em 1rem black;
     position: relative;
-    /* here what you want */
+    /* change the url with the link of image you want */
     background-image: url(https://laaouatni.github.io/w11-clone/images/0light.jpg);
+    /*making the background responsive*/
     background-size: cover;
+    /*center the background */
     background-position: center;
     background-repeat: no-repeat;
-    /* the magic is in the next property */
+    /* the MAGIC is  HERE in the next property */
     background-attachment: fixed;
     /*the transition make everything look good*/
     transition-duration: 0.1s;
