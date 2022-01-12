@@ -1,0 +1,14 @@
+.container img {
+    /* responsive image */
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    /* used css grid*/
+    display: grid;
+    /* always 4 images in a column, auto-generated rows*/
+    grid-template-columns: repeat(4, 1fr);
+    /* this is like margin */
+    gap: 0.5rem;
+}
