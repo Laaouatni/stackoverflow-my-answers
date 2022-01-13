@@ -1,0 +1,11 @@
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 500px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
