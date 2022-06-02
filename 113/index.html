@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- background -->
+    <section class="bg">
+        <!-- phone -->
+        <img class="phone" src="https://i.stack.imgur.com/cfq59.png" alt="" />
+    </section>
+
+    <style>
+        .phone {
+            position: absolute;
+            bottom: 0;
+            /* the solution */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .bg {
+            /* change this link to yout background image (not the phone) */
+            background-image: url("https://i.stack.imgur.com/Sy91H.jpg");
+            /* this make the background -> responsive */
+            background-size: cover;
+            /* take 100% of the space */
+            /* (if you need less than 100% don't change this, instead change the parent height) */
+            height: 100%;
+            /* this line is important, and is needed for making the position work in image or childrens */
+            position: relative;
+        }
+        
+        * {
+            /* this solve the scroll problem */
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            /* this solve the little margin on body tag (chrome) */
+            margin: 0;
+            /* html take the 100% of height */
+            height: 100%;
+        }
+    </style>
+</body>
+
+</html>
