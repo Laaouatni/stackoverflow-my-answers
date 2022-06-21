@@ -1,0 +1,33 @@
+.animated {
+    position: relative;
+    white-space: nowrap;
+    max-width: 150px;
+    overflow: hidden;
+    background: #0c0c0c;
+}
+
+.text-animated {
+    color: #fff;
+    animation: backAndForth 5s linear infinite;
+}
+
+@keyframes backAndForth {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(0);
+    }
+    45% {
+        transform: translateX(calc(100% - 340px));
+    }
+    55% {
+        transform: translateX(calc(100% - 340px));
+    }
+    90% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
