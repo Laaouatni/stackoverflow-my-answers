@@ -1,0 +1,82 @@
+/* presetting */
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    /* you can set rgb(240,240,240) for a grey color similar to the image above */
+    background: grey;
+    /* choose your height */
+    height: 3rem;
+    /* little space in the right and left (like in the photo) */
+    padding: 0 2rem;
+    /* this is important for the child elements */
+    display: flex;
+}
+
+nav a {
+    --skew-value: 20deg;
+    /* make the links take the same space, so same width (responsive) */
+    /* make sure the parent element have "display: flex" */
+    flex: 1;
+    /* centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* the trick */
+    /* you can also use something simply like "skew(-20deg)" */
+    transform: skew(calc(var(--skew-value) * -1));
+    /* make little animation on hover */
+    transition: all 0.2s;
+}
+
+
+/* colors */
+
+nav a {
+    /* default background color is orange */
+    background: orange;
+    /* if the parent element is orange, the text color it will be white, so it will be more visible*/
+    color: white;
+    /* delete the line under the text */
+    text-decoration: none;
+    font-weight: bold;
+    /* make first letter CAPITAL */
+    text-transform: capitalize;
+}
+
+
+/* little border, so user can see where is the buttons */
+
+nav a:not(:last-child) {
+    border-right: 2px solid white;
+}
+
+
+/* .active class (you can use JS for add and removing this class) */
+
+nav a.active {
+    background: white;
+    color: black;
+}
+
+
+/* if hover the link (insert in this selector your css for hovering) */
+
+nav a:hover {
+    opacity: 0.9;
+}
+
+
+/* make the text not break, by inverting the skew()*/
+
+
+/* "skew(20deg)" */
+
+nav a>span {
+    transform: skew(var(--skew-value));
+}
