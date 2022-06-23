@@ -1,0 +1,22 @@
+/* parent */
+
+.iqalJN {
+    display: grid;
+    /* here the solution */
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    margin-bottom: 2rem;
+    column-gap: 2rem;
+}
+
+.btn-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.5rem;
+}
+
+hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid black;
+}
