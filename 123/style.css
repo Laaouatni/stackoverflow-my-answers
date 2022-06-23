@@ -1,0 +1,38 @@
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+.item {
+    float: left;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
+.item1 {
+    width: 60%;
+    height: 400px;
+    background-color: red;
+}
+
+.item2 {
+    width: 60%;
+    height: 100px;
+    background-color: green;
+}
+
+.item3 {
+    width: 30%;
+    height: 200px;
+    background-color: blue;
+}
+
+.item4 {
+    width: 30%;
+    height: 500px;
+    background-color: yellow;
+}
