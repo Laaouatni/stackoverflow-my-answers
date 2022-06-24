@@ -1,0 +1,9 @@
+input[type="image"] {
+    background-image: url("https://picsum.photos/200");
+    height: 200px;
+    width: 200px;
+}
+
+input[type="image"]:hover {
+    background-image: url("https://picsum.photos/200/200")
+}
