@@ -1,0 +1,39 @@
+#plus {
+    /* change this value to the desired width */
+    --width: 20rem;
+    /* setting the background color */
+    background-color: black;
+    /* setting height and width with the value of css variable */
+    width: var(--width);
+    height: var(--width);
+    /* perfect circle */
+    border-radius: var(--width);
+    /* centrering */
+    display: grid;
+    place-items: center;
+    /* don't delete this, is important for the ::before and ::after pseudoelements */
+    position: relative;
+}
+
+#plus::before,
+#plus::after {
+    content: "";
+    /* using css calc() https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
+    /* height and width relative to css variable, change to what you feel is good */
+    height: calc(var(--width) / 1.5);
+    width: calc(var(--width) / 5);
+    /* coloring the pseudoelements */
+    background-color: white;
+    /* here the TRICK, using calc() we easily canculate the rotation, with hardcoding this value */
+    transform: rotate(calc(var(--i) * 90deg));
+    /* important don't delete */
+    position: absolute;
+}
+
+#plus::before {
+    --i: 1;
+}
+
+#plus::after {
+    --i: 2;
+}
