@@ -1,0 +1,21 @@
+#text {
+    --width: 2rem;
+    font-size: var(--width);
+    writing-mode: vertical-rl;
+    position: relative;
+    mix-blend-mode: difference;
+}
+
+#text::before {
+    content: "";
+    position: absolute;
+    width: var(--width);
+    height: 0;
+    background-color: red;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+
+#text:hover::before {
+    height: 10rem;
+}
