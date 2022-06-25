@@ -1,0 +1,26 @@
+#container {
+    --width: 3rem;
+    --color: #666;
+    /* same height, same width */
+    width: var(--width);
+    height: var(--width);
+    /* responsive padding that is relative to the container width*/
+    padding: calc(var(--width) / 5);
+    /* always perfect circle */
+    border-radius: var(--width);
+    /* centering */
+    display: grid;
+    place-items: center;
+    /* coloring with the same color */
+    border: 1px solid var(--color);
+    color: var(--color);
+    /* font responsive to parent container */
+    font-size: calc(var(--width) / 3)
+}
+
+#container hr {
+    /* responsive width */
+    width: 100%;
+    /* removing a little bug if we use GRID */
+    margin: 0;
+}
