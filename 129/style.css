@@ -1,0 +1,16 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: #1abc9c;
+    align-items: center;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
