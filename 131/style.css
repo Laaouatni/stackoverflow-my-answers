@@ -1,0 +1,40 @@
+#container {
+    /* change the height of the parent, it will automatically change the height of images and buttons */
+    --height: 15vw;
+    /* 12px is the default height of scrollbar (at least in chrome), 
+    but I added some pixel to make sure that it will be working also in Firefox etc... 
+    you can change it manually here or...*/
+    /* you can also change this value using javascript https://stackoverflow.com/questions/28360978/css-how-to-get-browser-scrollbar-width-for-hover-overflow-auto-nice-margi */
+    /* we will use this css var inside line 35 CSS (#result .thumbnail) */
+    --scrollBarHeight: 15px;
+    border: 1px solid red;
+    /* button (auto width) #result (all space) */
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /* gap between buttons and #result, change it if you want */
+    gap: 1rem;
+}
+
+#container button {
+    /* square button */
+    height: var(--height);
+    width: var(--height);
+    /* font-size auto sized by the height of button */
+    font-size: calc(var(--height) / 1.5)
+}
+
+#result {
+    height: var(--height);
+    /* displayed one near the other */
+    display: flex;
+    gap: 0.5rem;
+    /* active a scrollbar */
+    overflow-x: scroll;
+}
+
+#result .thumbnail {
+    /* solving bug: "scrollbar on top the images" */
+    height: calc(var(--height) - var(--scrollBarHeight));
+    /* make image not stretch css */
+    object-fit: cover;
+}
