@@ -1,0 +1,36 @@
+/* this is a example, don't copy and paste */
+
+
+/* bottom left */
+
+#container .luminosity {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+
+/* center */
+
+#container .hsl {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* top right */
+
+#container .hue {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+
+/* change the margin you want */
+
+body p {
+    margin: 1rem;
+}
