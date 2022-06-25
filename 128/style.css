@@ -24,7 +24,7 @@
     width: calc(var(--width) / 5);
     /* coloring the pseudoelements */
     background-color: white;
-    /* here the TRICK, using calc() we easily canculate the rotation, with hardcoding this value */
+    /* here the TRICK, using calc() we easily canculate the rotation, without hardcoding this value */
     transform: rotate(calc(var(--i) * 90deg));
     /* important don't delete */
     position: absolute;
