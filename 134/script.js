@@ -43,9 +43,18 @@ allButtons.forEach((choice, index) => {
         result.style.removeProperty("color");
         computerChoice.innerHTML = `Computer choose: ${compChoice}`;
 
+        if( compChoice == winLoseArray[index].toWin) {
+result.innerHTML = allResults[0].message;
+result.style = allResults[0].color;
+}
         if (compChoice == userChoice) {
             result.innerHTML = allResults[1].message;
             result.style.color = allResults[1].color;
+        }
+        
+        if(compChoice == winLoseArray[index].toLose) {
+            result.innerHTML = allResults[3].message;
+            result.style.color = allResults[3].color;
         }
 
         console.log(winLoseArray[index])
