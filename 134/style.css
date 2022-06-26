@@ -1,4 +1,4 @@
-/* .container {
+.container {
     margin-top: 100px;
     display: flex;
     justify-content: center;
@@ -75,4 +75,4 @@ body {
     100% {
         transform: translateX(0);
     }
-} */
+}

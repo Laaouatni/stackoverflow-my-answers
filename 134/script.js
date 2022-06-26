@@ -1,4 +1,4 @@
-/* let rock = document.querySelector(".rock-btn");
+let rock = document.querySelector(".rock-btn");
 let paper = document.querySelector(".paper-btn");
 let scissors = document.querySelector(".scissors-btn");
 
@@ -18,6 +18,17 @@ let allResults = [{
 }, {
     message: "Result: Oh no, You lost!",
     color: "#8d1d1d"
+}];
+
+let winLoseArray = [{
+    toWin: allChoices[2],
+    toLose: allChoices[1]
+}, {
+    toWin: allChoices[0],
+    toLose: allChoices[2]
+}, {
+    toWin: allChoices[1],
+    toLose: allChoices[0]
 }]
 
 allButtons.forEach((choice, index) => {
@@ -37,6 +48,8 @@ allButtons.forEach((choice, index) => {
             result.style.color = allResults[1].color;
         }
 
+        console.log(winLoseArray[index])
+
         if (compChoice == "Rock") {
             result.innerHTML = "Result: It's a draw!";
             result.style.color = "#5c3000";
@@ -48,4 +61,4 @@ allButtons.forEach((choice, index) => {
             result.style.color = "#1e612b";
         }
     });
-}); */
+});
