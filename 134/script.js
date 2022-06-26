@@ -44,7 +44,7 @@ allButtons.forEach((choice, index) => {
         computerChoice.innerHTML = `Computer choose: ${compChoice}`;
 
         if( compChoice == winLoseArray[index].toWin) {
-result.innerHTML = allResults[0].message;
+            result.innerHTML = allResults[0].message;
 result.style = allResults[0].color;
 }
         if (compChoice == userChoice) {
@@ -57,17 +57,7 @@ result.style = allResults[0].color;
             result.style.color = allResults[3].color;
         }
 
-        console.log(winLoseArray[index])
-
-        if (compChoice == "Rock") {
-            result.innerHTML = "Result: It's a draw!";
-            result.style.color = "#5c3000";
-        } else if (compChoice == "Paper") {
-            result.innerHTML = "Result: Oh no, You lost!";
-            result.style.color = "#8d1d1d";
-        } else if (compChoice == "Scissors") {
-            result.innerHTML = "Result: Congratulations, You won!";
-            result.style.color = "#1e612b";
-        }
+        result.classList.remove("animation"); 
+        result.classList.add("animation");
     });
 });
