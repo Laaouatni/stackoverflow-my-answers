@@ -66,20 +66,20 @@ allButtons.forEach((choice, index) => {
         select.innerHTML = `select: ${userChoice}`;
         computerChoice.innerHTML = `Computer choose: ${compChoice}`;
 
-        /* if else for displaying if user win or lose */
-        if (compChoice == winLoseArray[index].toWin) {
-            result.innerHTML = allResults[0].message;
-            result.style.color = allResults[0].color;
-        }
-
-        if (compChoice == userChoice) {
-            result.innerHTML = allResults[1].message;
-            result.style.color = allResults[1].color;
-        }
-
-        if (compChoice == winLoseArray[index].toLose) {
-            result.innerHTML = allResults[2].message;
-            result.style.color = allResults[2].color;
+        /* instead of If Else, We Will be using "switch" */
+        switch (compChoice) {
+            case winLoseArray[index].toWin:
+                result.innerHTML = allResults[0].message;
+                result.style.color = allResults[0].color;
+                break;
+            case winLoseArray[index].toLose:
+                result.innerHTML = allResults[2].message;
+                result.style.color = allResults[2].color;
+                break;
+            default:
+                result.innerHTML = allResults[1].message;
+                result.style.color = allResults[1].color;
+                break;
         }
 
         /* THIS IS THE TRICK */
