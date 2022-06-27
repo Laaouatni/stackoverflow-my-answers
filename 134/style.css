@@ -64,6 +64,9 @@ body {
     background-color: rgb(136, 152, 167);
 }
 
+
+/* animation, this is added by javascript */
+
 .animation {
     animation: move 1s ease-in-out;
 }
