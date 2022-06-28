@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+}
+
+#one {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.7) 75%), url("https://picsum.photos/500");
+    padding-top: 168px;
+    padding-bottom: 100px;
+    color: white;
+    border: none;
+    background-size: cover;
+}
