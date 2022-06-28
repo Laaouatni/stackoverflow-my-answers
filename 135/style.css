@@ -1,6 +1,18 @@
+.border {
+    /* parent container, for centering the child */
+    display: grid;
+    place-items: center;
+}
+
 .ingredients {
     font-size: 14px;
     line-height: 30px;
+    /* using grid layout */
     display: grid;
-    place-items: center;
+    /* all the child always have the same space (the bigger element width) */
+    grid-template-columns: auto 1fr;
+    /* centering the text vertically, but is in the start one under the other */
+    place-items: center start;
+    /* a gap between the input and the text */
+    gap: 0 1rem;
 }
