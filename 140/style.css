@@ -1,0 +1,3 @@
+td:is([style*="background-color: #ffc"], [style*="background-color: #fb9"], [style*="background-color: #bfc"], [style*="background-color: #fcc"]) {
+    background-color: #0d1117 !important;
+}
