@@ -1,4 +1,38 @@
-.sidebar header .image-text {
+.footer-icon-list {
+    --height: 40px;
+    background-color: #0f1720;
+    padding: calc(var(--height) / 4) 0;
+    /* centering */
     display: flex;
-    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.footer-icon-list span button {
+    margin: auto;
+    border: none;
+    /* the solution */
+    background-color: inherit;
+    background-size: var(--height);
+    height: var(--height);
+    width: var(--height);
+}
+
+
+/* images */
+
+.Facebook-buttom {
+    background-image: url("https://raw.githubusercontent.com/AayushPokharel/ContentDeliveryRepo/master/facebook.png");
+}
+
+.Instagram-buttom {
+    background-image: url("https://raw.githubusercontent.com/AayushPokharel/ContentDeliveryRepo/master/instagram.png");
+}
+
+.Twitter-buttom {
+    background-image: url("https://raw.githubusercontent.com/AayushPokharel/ContentDeliveryRepo/master/twitter.png");
+}
+
+.Github-buttom {
+    background-image: url("https://raw.githubusercontent.com/AayushPokharel/ContentDeliveryRepo/master/github.png");
 }
