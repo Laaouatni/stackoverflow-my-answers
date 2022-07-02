@@ -1,0 +1,69 @@
+body {
+    /* deleting the default margin */
+    margin: 0;
+}
+
+.navbar {
+    /* setting the height of navbar */
+    --nav-height: 3rem;
+    height: var(--nav-height);
+    /* centering */
+    display: grid;
+    place-items: center;
+    /*  logo: auto (less space)
+        input: all space width
+        other: auto (less space)
+    */
+    grid-template-columns: auto 1fr auto;
+    /* little padding */
+    padding: 0 0.5rem;
+    /* a gap between elements of navbar */
+    gap: 0.5rem;
+}
+
+
+/* css for the menu icon */
+
+.navbar svg {
+    height: calc(var(--nav-height) / 2);
+    padding: 0 0.5rem;
+}
+
+
+/* css for the container of input and menu icon */
+
+.navbar #second-container {
+    display: grid;
+    /* menu icon take less space
+    input take 100% space */
+    grid-template-columns: auto 1fr;
+    /* making the container take all the space */
+    width: 100%;
+}
+
+
+/* css for the input */
+
+.navbar #second-container input {
+    display: grid;
+    height: calc(var(--nav-height) / 2);
+}
+
+
+/* css for the other things on the right side of the nav*/
+
+.navbar #third-container img {
+    height: calc(var(--nav-height)/ 1.5);
+}
+
+
+/* responsive for mobile devices */
+
+@media (max-width: 768px) {
+    .navbar {
+        grid-template-columns: 1fr;
+    }
+    .navbar #third-container {
+        display: none;
+    }
+}
