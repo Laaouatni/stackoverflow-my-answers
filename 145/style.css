@@ -1,7 +1,10 @@
 .footer-icon-list {
     --height: 40px;
+    /* this is your background of the parent
+    I suggest you to change it (grey on black don't have a good contrast) */
     background-color: #0f1720;
-    padding: calc(var(--height) / 4) 0;
+    /* this shortcut set the bottom and top with the 10px */
+    padding: 10px 0;
     /* centering */
     display: flex;
     text-align: center;
@@ -11,11 +14,11 @@
 .footer-icon-list span button {
     margin: auto;
     border: none;
+    background-size: 40px;
+    height: 40px;
+    width: 40px;
     /* the solution */
     background-color: inherit;
-    background-size: var(--height);
-    height: var(--height);
-    width: var(--height);
 }
 
 
