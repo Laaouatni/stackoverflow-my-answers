@@ -1,0 +1,10 @@
+.AlignLeft {
+    display: flex;
+    /* solve the problem (now the text is on the left side) */
+    flex-direction: row-reverse;
+    /* you can center easily using flex */
+    justify-content: center;
+    align-items: center;
+    /* add a gap is easier with flex */
+    gap: 1rem;
+}
