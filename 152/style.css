@@ -1,0 +1,48 @@
+.container {
+    height: 500px;
+    width: 500px;
+    background-color: red;
+}
+
+.child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 50%;
+    background-color: blue;
+    transition: transform 1s ease-in;
+}
+
+.container:hover .child {
+    animation: the-animation 1s ease-in forwards;
+}
+
+.content:before {
+    content: "The text Before"
+}
+
+.container:hover .content:before {
+    content: "";
+    animation: change-text 1s forwards;
+}
+
+@keyframes change-text {
+    99% {
+        content: "This is the text";
+    }
+    100% {
+        content: "IT WORKS"
+    }
+}
+
+@keyframes the-animation {
+    0% {
+        height: 250px;
+        width: 250px;
+    }
+    100% {
+        height: 500px;
+        width: 500px;
+    }
+}
