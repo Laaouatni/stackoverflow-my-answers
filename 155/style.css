@@ -1,0 +1,20 @@
+#container {
+    /* for this project we are using css grid */
+    display: grid;
+    /* text: auto width (minumum width possible)
+       hr: 1fr (max width possible)
+       text: auto width (minumum width possible)
+    */
+    grid-template-columns: auto 1fr auto;
+    /* margin between elements */
+    gap: 1rem;
+    /* centering */
+    align-items: center;
+}
+
+#container hr {
+    /* removing the bug of invisible hr */
+    margin: 0;
+    /* removing the bug of hr take all height (because of css grid) */
+    height: min-content;
+}
