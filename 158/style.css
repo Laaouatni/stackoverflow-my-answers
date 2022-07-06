@@ -1,0 +1,20 @@
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%, 0.9);
+}
+
+#submit {
+    background: var(--Dark-cyan);
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px 60px;
+    border-radius: 15px;
+}
+
+#submit:hover {
+    backdrop-filter: brightness(50%);
+}
