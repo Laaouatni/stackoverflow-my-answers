@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" class="action-oser" id="click-vlink2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 18v-12l10 6-10 6z" style="fill:#fff" /></svg>
+    </button>
+    <div id="video-modal2" style="/* display: none; */">
+        <div class="content-oser">
+            <iframe style="max-width: 100%;" width="560" height="315" id="youtube2" src="https://www.youtube.com/embed/JexOJOssGwk?rel=0&enablejsapi=1&origin=https%3A%2F%2Fwww.apetito.co.uk&widgetid=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        require(
+            [
+                'jquery',
+                'Magento_Ui/js/modal/modal'
+            ],
+            function(
+                $,
+                modal
+            ) {
+                var options = {
+                    type: 'popup',
+                    responsive: true,
+
+                    modalClass: 'nursery-modal',
+                    'buttons': [{
+                        class: 'action-oser'
+                    }]
+                };
+
+                var popup = modal(options, $('#video-modal2'));
+                $("#click-vlink2").on('click', function() {
+                    $("#video-modal2").modal("openModal");
+                });
+                $('.action-close').on('click', function() {
+                    var video = $("#youtube2").attr("src");
+                    $("#youtube2").attr("src", "");
+                    $("#youtube2").attr("src", video);
+                });
+
+
+            }
+        );
+    </script>
+</body>
+
+</html>
