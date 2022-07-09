@@ -1,1 +1,0 @@
-document.querySelector('.list').classList.add('anim');
