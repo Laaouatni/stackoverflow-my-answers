@@ -1,0 +1,32 @@
+* {
+    /* solve the bug of scrollbar be visible */
+    box-sizing: border-box;
+}
+
+#container {
+    /* the most important line here */
+    display: grid;
+    /* 100vh is the height of the device */
+    height: 100vh;
+    /* another not important for the functionality, only visually css */
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.card {
+    /* debugging border, delete it */
+    outline: 1px solid red;
+    /* centering */
+    display: grid;
+    place-items: center;
+}
+
+
+/* responsive desktop*/
+
+@media (min-width: 600px) {
+    #container {
+        /* the css property for pc version */
+        grid-template-columns: 1fr 1fr;
+    }
+}
