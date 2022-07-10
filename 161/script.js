@@ -14,36 +14,14 @@ let iconData = [{
         "text": "folder",
         "iconName": "fa-folder",
         "color": "blue"
-    },
-    {
-        "text": "folder",
-        "iconName": "fa-folder",
-        "color": "blue"
-    }, 
-    {
-        "text": "folder",
-        "iconName": "fa-folder",
-        "color": "blue"
-    },
-    {
-        "text": "folder",
-        "iconName": "fa-folder",
-        "color": "blue"
-    },
-    {
-        "text": "folder",
-        "iconName": "fa-folder",
-        "color": "blue"
-    },
-    {
-        "text": "folder",
-        "iconName": "fa-folder",
-        "color": "blue"
-    },
-    {
-        "text": "folder",
-        "iconName": "fa-folder",
-        "color": "blue"
+    }, {
+        "text": "map",
+        "iconName": "fa-map",
+        "color": "green"
+    }, {
+        "text": "notification",
+        "iconName": "fa-bell",  
+        "color": "cyan"
     }
 ];
 
