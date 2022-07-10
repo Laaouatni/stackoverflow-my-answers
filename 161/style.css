@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 :root {
     --bg: red;
     --nav-height: 5rem;
     --nav-width: 20rem;
-    --icon-height: calc(var(--nav-height) / 2);
-    --anim-speed: 0.3s;
+    --anim-speed: 0.5s;
+    --icon-size: calc(var(--nav-height) / 2) ;
 }
 
 * {
@@ -11,77 +13,79 @@
 }
 
 body {
-    margin: 0;
     background-color: var(--bg);
     display: grid;
     place-items: center;
+    margin: 0;
     height: 100vh;
     width: 100vw;
+   
 }
 
 nav {
-    background-color: white;
+    display: flex;
+    padding: 0 var(--icon-size);
+    gap: var(--icon-size);
     height: var(--nav-height);
     border-radius: var(--nav-height);
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: var(--nav-width);
+    background-color: white;
     box-shadow: 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.3);
-    position: relative;
 }
+
+
 
 nav .icon-div {
     display: flex;
-    width: 100%;
     align-items: center;
-    justify-content: center;
     position: relative;
 }
 
-nav i {
-    font-size: var(--icon-height);
-    color: grey;
+nav .icon {
+    --disabled-color: grey; 
+    font-size: var(--icon-size);
+    color: var(--disabled-color);
+    filter: drop-shadow(0 0 calc(var(--icon-size) / 2) var(--disabled-color));
 }
 
-nav .icon-div:hover i {
+.icon-div.active .icon {
     color: var(--bg);
-}
-
-nav .icon-div:active i {
-    transform: rotate(20deg);
+    filter: inherit;
 }
 
 nav .icon-div::before {
-    content: attr(data-text);
+    content:"very long long long text";
     top: 0;
     color: white;
     position: absolute;
     z-index: -1;
-    transition: top var(--anim-speed) ease-in-out;
+    width: max-content;
+    transform: translateX(-50%);
+    left: 50%;
+    opacity: 0;
 }
 
-nav .icon-div:hover::before {
+nav .icon-div.active::before {
+    font-family: poppins;
     --top-visible: calc(-1 * (var(--nav-height) / 3));
-    top: var(--top-visible);
+    animation: showDataText var(--anim-speed); 
 }
 
-.icon-div:hover::after {
-    content: "";
-    height: 0.5rem;
-    width: var(--icon-height);
-    border-radius: 0.5rem;
-    background-color: var(--bg);
-    bottom: calc(var(--nav-height) / 15);
-    position: absolute;
+@keyframes showDataText {
+    from {
+        opacity: 0;
+        top: 0;
+    }
+    30% {
+        opacity: 1;
+        top: var(--top-visible);
+    }
+    70% {
+        opacity: 1;
+        top: var(--top-visible);
+    }
+    to { 
+        opacity: 0;
+        top: 0;
+    }
 }
 
-.icon-div:active::after {
-    content: "";
-    height: 0.5rem;
-    width: calc(var(--icon-height) - 0.5rem);
-    border-radius: 0.5rem;
-    background-color: var(--bg);
-    bottom: calc(var(--nav-height) / 15);
-    position: absolute;
-} 

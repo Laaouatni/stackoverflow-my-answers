@@ -53,9 +53,8 @@ let allIconsDiv = document.querySelectorAll(`.${parentClass}`);
 allIconsDiv.forEach((thisIconDiv, index) => {
     let thisIcon = thisIconDiv.querySelector(".icon");
 
-    addTitleAttribute(thisIconDiv);
+    addDataAttribute(thisIconDiv);
     thisIconDiv.addEventListener("click", styleIcon);
-
 
     function styleIcon() {
         makeIconSolid(thisIcon);
@@ -69,13 +68,25 @@ allIconsDiv.forEach((thisIconDiv, index) => {
         }
 
         function makeIconSolid(iconName) { 
-            iconName.classList.remove(`${iconStylesArray[0]}`);
+            allIconsDiv.forEach((thisDiv) => {
+                let thisSolidIcon = thisDiv.querySelector(".icon");
+                
+                thisDiv.classList.remove("active");
+                makeOutlined(thisSolidIcon);
+
+                function makeOutlined(iconName) {
+                    iconName.classList.remove(`${iconStylesArray[1]}`);
+                    iconName.classList.add(`${iconStylesArray[0]}`);
+                }
+            });
+    
             iconName.classList.add(`${iconStylesArray[1]}`);
+            thisIconDiv.classList.add("active");
         }
     }
 
-    function addTitleAttribute(iconName) {
+    function addDataAttribute(iconName) {
         let thisTitle = iconData[index].text;
-        iconName.setAttribute("title", `${thisTitle}`);
+        iconName.setAttribute("data-text", `${thisTitle}`);
     }
 });
