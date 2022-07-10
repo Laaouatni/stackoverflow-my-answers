@@ -53,7 +53,7 @@ nav .icon {
 }
 
 nav .icon-div::before {
-    content:"very long long long text";
+    content: attr(data-text);
     top: 0;
     color: white;
     position: absolute;
