@@ -4,12 +4,12 @@
     --bg: red;
     --nav-height: 5rem;
     --nav-width: 20rem;
-    --anim-speed: 0.5s;
+    --anim-speed: 0.2s;
     --icon-size: calc(var(--nav-height) / 2);
 }
 
-* {
-    transition: all var(--anim-speed) ease-in-out;
+*, *::before, *::after {
+    transition: all var(--anim-speed);
     box-sizing: border-box;
 }
 
@@ -67,7 +67,7 @@ nav .icon-div::before {
 nav .icon-div.active::before {
     font-family: poppins;
     --top-visible: calc(-1 * (var(--nav-height) / 3));
-    animation: showDataText var(--anim-speed); 
+    animation: showDataText calc(var(--anim-speed) * 3); 
 }
 
 @keyframes showDataText {
@@ -79,7 +79,7 @@ nav .icon-div.active::before {
         opacity: 1;
         top: var(--top-visible);
     }
-    70% {
+    80% {
         opacity: 1;
         top: var(--top-visible);
     }
@@ -103,3 +103,6 @@ nav::after {
     border-radius: var(--indicator-height);
 }
 
+nav:active::after {
+    width: calc(var(--icon-size) - 1rem);
+}
