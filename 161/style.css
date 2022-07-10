@@ -106,3 +106,8 @@ nav::after {
 nav:active::after {
     width: calc(var(--icon-size) - 1rem);
 }
+
+.icon-div:active .icon {
+    --angle: 20deg;
+    transform: rotate(20deg);
+}
