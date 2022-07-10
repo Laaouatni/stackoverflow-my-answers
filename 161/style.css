@@ -5,11 +5,12 @@
     --nav-height: 5rem;
     --nav-width: 20rem;
     --anim-speed: 0.5s;
-    --icon-size: calc(var(--nav-height) / 2) ;
+    --icon-size: calc(var(--nav-height) / 2);
 }
 
 * {
     transition: all var(--anim-speed) ease-in-out;
+    box-sizing: border-box;
 }
 
 body {
@@ -30,9 +31,8 @@ nav {
     border-radius: var(--nav-height);
     background-color: white;
     box-shadow: 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.3);
+    position: relative;
 }
-
-
 
 nav .icon-div {
     display: flex;
@@ -87,5 +87,19 @@ nav .icon-div.active::before {
         opacity: 0;
         top: 0;
     }
+}
+
+nav::after {
+    --indicator-height: 0.4rem;
+    --left-position: calc(var(--iconActiveIndex, 1) * 35px);
+    content: "";
+    position: absolute;
+    background-color: var(--bg);
+    height: var(--indicator-height);
+    width: var(--icon-size);
+    bottom: var(--indicator-height);
+    left: var(--left-position);
+    transform: translateX(calc(var(--posXindicator, 1) * 1px));
+    border-radius: var(--indicator-height);
 }
 

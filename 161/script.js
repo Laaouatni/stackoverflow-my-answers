@@ -10,6 +10,40 @@ let iconData = [{
         "text": "profile",
         "iconName": "fa-user",
         "color": "yellow"
+    }, {
+        "text": "folder",
+        "iconName": "fa-folder",
+        "color": "blue"
+    },
+    {
+        "text": "folder",
+        "iconName": "fa-folder",
+        "color": "blue"
+    }, 
+    {
+        "text": "folder",
+        "iconName": "fa-folder",
+        "color": "blue"
+    },
+    {
+        "text": "folder",
+        "iconName": "fa-folder",
+        "color": "blue"
+    },
+    {
+        "text": "folder",
+        "iconName": "fa-folder",
+        "color": "blue"
+    },
+    {
+        "text": "folder",
+        "iconName": "fa-folder",
+        "color": "blue"
+    },
+    {
+        "text": "folder",
+        "iconName": "fa-folder",
+        "color": "blue"
     }
 ];
 
@@ -21,14 +55,13 @@ let iconStylesArray = Object.values({
 let navContainer = document.querySelector("nav");
 let parentClass = "icon-div";
 
-// generating the icon in html
 iconData.forEach((thisData) => {
     let newIconContainer, newIcon;
     let actualIconName = thisData.iconName;
 
-    createDivContainer(parentClass); // this class, will be the parent div
-    createNewIcon(actualIconName); // this create the icon inside the parent class
-    appendChildToNavbar(navContainer); // this add the icon generated to navbar
+    createDivContainer(parentClass); 
+    createNewIcon(actualIconName); 
+    appendChildToNavbar(navContainer); 
 
     function createDivContainer(className) {
         newIconContainer = document.createElement("div");
@@ -82,6 +115,8 @@ allIconsDiv.forEach((thisIconDiv, index) => {
     
             iconName.classList.add(`${iconStylesArray[1]}`);
             thisIconDiv.classList.add("active");
+            navContainer.style.setProperty("--iconActiveIndex", `${index!=0 ? 2*(index+1)-1 : index+1}`);
+            navContainer.style.setProperty("--posXindicator", `${index>2 ? (index-2)*10 : index!=2?1:2}`);
         }
     }
 
