@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }       
+  .wrapper {
+    height: 300px;
+    width: 800px;
+    overflow: scroll;
+    position: relative;
+  }       
+  p {
+    margin-bottom: 20px;
+  }      
+  span.tag {
+    position: absolute;
+    padding: 10px;
+    background-color: deepskyblue;
+    color: white;
+  }       
+  .tl {
+    top: 0;
+    left: 0;
+  }       
+  .tr {
+    top: 0;
+    right: 0;
+  }
