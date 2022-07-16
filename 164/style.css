@@ -1,0 +1,20 @@
+.header-container {
+    color: #5995DA;
+    background-color: #D6E9FE;
+    display: flex;
+    justify-content: center;
+    /* here what I added in your code */
+    flex-direction: column;
+}
+
+.header {
+    width: 900px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center; 
+}
+.photo-grid-container {
+    display: flex;
+    justify-content: center;
+}
