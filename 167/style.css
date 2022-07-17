@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+:root {
+    /* --bg: red; */
+    --nav-height: 3rem;
+    --nav-width: 20rem;
+    --anim-speed: 0.2s;
+    --icon-size: calc(var(--nav-height) / 2);
+}
+
+*,
+*::before,
+*::after {
+    transition: all var(--anim-speed);
+    box-sizing: border-box;
+}
+
+/* body {
+background-color: var(--bg);
+display: grid;
+place-items: center;
+margin: 0;
+height: 100vh;
+width: 100vw;
+
+} */
+
+body {
+    margin: 0;
+}
+
+#footerTabs {
+    width: 100%;
+    display: flex;
+    padding: 0 var(--icon-size);
+    gap: var(--icon-size);
+    height: 4rem;
+    /* border-radius: var(--nav-height); */
+    background-color: white;
+    box-shadow: 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.3);
+    position: fixed;
+    bottom: 0;
+}
+
+#footerTabs .icon-div {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: auto;
+}
+
+#footerTabs .icon {
+    cursor: pointer;
+    --disabled-color: grey;
+    font-size: 1.5rem;
+    color: var(--disabled-color);
+    filter: drop-shadow(0 0 calc(var(--icon-size) / 2) var(--disabled-color));
+}
+
+#footerTabs .icon-div:active .icon,
+#footerTabs .active .icon {
+    /* color: var(--bg); */
+    filter: invert(56%) sepia(80%) saturate(3616%) hue-rotate(160deg) brightness(93%) contrast(103%);
+    /* filter: inherit; */
+}
+
+#footerTabs .icon-div::before {
+    content: attr(data-text);
+    top: 0;
+    color: #3EBDCC;
+    position: absolute;
+    z-index: -1;
+    width: max-content;
+    transform: translateX(-50%);
+    left: 50%;
+    opacity: 0;
+}
+
+#footerTabs .icon-div.active::before {
+    font-family: poppins;
+    --top-visible: calc(-1 * (var(--nav-height) / 3));
+    animation: showDataText calc(var(--anim-speed) * 2);
+}
+
+@keyframes showDataText {
+    from {
+        opacity: 0;
+        top: 0;
+    }
+
+    30% {
+        opacity: 1;
+        top: var(--top-visible);
+    }
+
+    80% {
+        opacity: 1;
+        top: var(--top-visible);
+    }
+
+    to {
+        opacity: 0;
+        top: 0;
+    }
+}
+
+#footerTabs::after {
+    --indicator-height: 0.4rem;
+    --left-position: calc(var(--iconActiveIndex, 2.5) * 33%);
+    width: 10px;
+    transform: translateX(var(--Xcorrection, -10px));
+    content: "";
+    position: absolute;
+    background-color: #3EBDCC;
+    height: var(--indicator-height);
+    bottom: var(--indicator-height);
+    left: var(--left-position);
+    border-radius: var(--indicator-height);
+}
+
+#footerTabs :active::after {
+    width: calc(var(--icon-size) - 1rem);
+}
+
+.icon-div:active .icon {
+    --angle: 20deg;
+    transform: rotate(20deg);
+}
