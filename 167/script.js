@@ -1,15 +1,15 @@
 let imgData = [{
-    "src": "https://picsum.photos/30/",
+    "src": "https://picsum.photos/30/", // put the correct link of image you have
     "alt": "home",
     "text": "Home"
 },
 {
-    "src": "https://picsum.photos/30/",
+    "src": "https://picsum.photos/30/", // put the correct link of image you have
     "alt": "all services",
     "text": "All services"
 },
 {
-    "src": "https://picsum.photos/30/",
+    "src": "https://picsum.photos/30/", // put the correct link of image you have
     "alt": "bundles",
     "text": "Bundles"
 }
