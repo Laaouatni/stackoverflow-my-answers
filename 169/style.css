@@ -1,25 +1,31 @@
-body {
-    background: linear-gradient(to right, yellow, blue);
+.gradient {
+    position: absolute;
     height: 100vh;
     width: 100vw;
-    margin: 0;
-    display: grid;
-    place-items: center;
-}
-
-#container {
-    background: white;
-    height: 80vh;
-    width: 80vw;
+    background: linear-gradient(90deg, rgba(242, 251, 95, 1) 0%, rgba(0, 89, 135, 1) 100%, rgba(99, 102, 23, 1) 100%);
+    z-index: 100;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-}
+    justify-content: center;
+    gap: 100px;
+  }
 
-#container .circles {
-    --cirle-height: 10rem;
-    outline: 2px solid red;
-    height: var(--cirle-height);
-    width: var(--cirle-height);
-    border-radius: var(--cirle-height);
-}
+  .bg {
+    position: absolute;
+    min-width: 80%;
+    height: 80%;
+    background-color: red;
+  }
+
+  .circle {
+    position: relative;
+    border-radius: 50%;
+    min-width: 100px;
+    min-height: 100px;
+    border: 2px solid green;
+    background: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
