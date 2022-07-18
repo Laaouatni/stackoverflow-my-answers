@@ -1,0 +1,17 @@
+.container {
+    /* make items one near the other in the X axis */
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+    /* if the image is a lot bigger, it will be resized and be responsive */
+    max-width: 100%;
+}
+
+/* centering vertically */
+.container>figure,
+.intro {
+    display: grid;
+    place-items: center;
+}
