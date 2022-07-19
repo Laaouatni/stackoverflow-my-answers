@@ -1,31 +1,35 @@
 .gradient {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(90deg, rgba(242, 251, 95, 1) 0%, rgba(0, 89, 135, 1) 100%, rgba(99, 102, 23, 1) 100%);
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 100px;
-  }
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(90deg, rgba(242, 251, 95, 1) 0%, rgba(0, 89, 135, 1) 100%, rgba(99, 102, 23, 1) 100%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .bg {
-    position: absolute;
-    min-width: 80%;
-    height: 80%;
-    background-color: red;
-  }
+.bg {
+  min-width: 80%;
+  height: 80%;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  mix-blend-mode: hard-light;
+}
 
-  .circle {
-    position: relative;
-    border-radius: 50%;
-    min-width: 100px;
-    min-height: 100px;
-    border: 2px solid green;
-    background: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-  }
+.circle {
+  position: relative;
+  border-radius: 50%;
+  min-width: 100px;
+  min-height: 100px;
+  border: 2px solid grey;
+  background: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background-color: grey; 
+}
