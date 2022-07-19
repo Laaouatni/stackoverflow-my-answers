@@ -1,0 +1,12 @@
+.container {
+    background-color: beige;
+    border: 1px solid red;
+    width: 250px;
+    height: 200px;
+    display: inline-block;
+    margin: 0px auto;
+}
+
+body {
+    text-align: center;
+}
