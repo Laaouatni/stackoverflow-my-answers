@@ -4,13 +4,22 @@
 
 #container {
   display: grid;
+  /* creating a margin between elements */
   gap: 1rem;
 }
 
 #container>div {
-  background: blue;
-  outline: 6px solid red;
+  background: red;
+  /* only debugging purposes */
   height: 30rem;
-  transition: all 0.5s;
-  width: 100%;
+
+  font-size: 2rem;
+}
+
+/* the most important thing */
+/* this make the element visible also after the scrolling */
+/* and is better than "fixed" position, because this solution is in the normal flow of the page */
+#container>div:nth-child(1) {
+  position: sticky;
+  top: 0;
 }

@@ -1,37 +1,26 @@
 squeeze({
-  target: document.querySelector('#container>div:nth-child(1)'),
+  /* in the target, you need to add the selector */
+  target: document.querySelector('#container>div:nth-child(1)')
 })
 
+/* this is a reusable function */
 function squeeze(options) {
-  let lastScrollPosition;
-  window.addEventListener('scroll', () => {
-    let heightElement = options.target.offsetHeight;
+  window.addEventListener('scroll', squeezeFunction);
 
+  function squeezeFunction() {
+    let heightElement = options.target.offsetHeight;
     let scrollPosition = window.pageYOffset;
 
-    makeFixed(options.target);
-    options.target.style.height = `${heightElement - scrollPosition}px`;
-
-    function makeFixed(element) {
-      element.style.position = 'fixed';
-      element.style.top = '0';
+    /* after that the height is 0, 
+    the div disappear,
+    and the eventlistener is removed */
+    if(heightElement <= 0) {
+      options.target.style.display = 'none';   
+      window.removeEventListener('scroll', squeezeFunction);
+    } else {
+      /* every pixel scrolled, we decreased from the div */
+      options.target.style.height = `${heightElement - scrollPosition}px`;
     }
-    
-    // function isScrollingDown() {
-    //   let result = trueOrFalse();
-    //   setLastScrollPosition();
-
-    //   return result;
-      
-    //   function trueOrFalse() {
-    //     return scrollPosition > lastScrollPosition ? true : false;
-    //   }
-
-    //   function setLastScrollPosition() {
-    //     lastScrollPosition = scrollPosition;
-    //   }
-    // }
-
-  });
+  }
 }
 
