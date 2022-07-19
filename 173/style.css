@@ -1,0 +1,32 @@
+.btnCircle {
+  /* here just change one value, to change the other automatically */
+  /* for example you can use a responsive unit (that change often) like `vw` and the other element will automatically changed automatically */
+  --bigCirle-Height: 100px; 
+  height: var(--bigCirle-Height);
+  width: var(--bigCirle-Height);
+  /* is always a perfect circle */
+  border-radius: var(--bigCirle-Height);
+  border: none; /* Remove default borders */
+  /* add this to make the ::before works */
+  position: relative;
+}
+
+.btnCircle::before {
+  /* change this value 1 means bigger, the smaller is the number (for example 0.7) the yellow circle is smaller */
+  /* using css variables and calculations the money it will be always responsive to the parent height */
+  --smallCirle-Height: calc(var(--bigCirle-Height) * 0.7);
+  content: '1€';
+  height: var(--smallCirle-Height);
+  width: var(--smallCirle-Height);
+  border-radius: var(--smallCirle-Height);
+  background: yellow;
+  /* this two lines will center the circle */
+  /* inset is like writing top: 50%, left: 50% */
+  inset: 50%;
+  transform: translate(-50%, -50%);
+  /* center the text inside circle */
+  display: grid;
+  place-content: center;
+  /* positioning absolutely */
+  position: absolute;
+}
