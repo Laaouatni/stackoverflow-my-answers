@@ -1,0 +1,89 @@
+/* Why Choose Section */
+
+#Why_choose {
+	background-color: black;
+	padding-top: 5rem;
+	padding-bottom: 2.5rem;
+}
+
+#Why_choose h1,
+h2,
+p {
+  color: white;
+	text-align: center;
+}
+
+#Why_choose h2 {
+  width: 13rem;
+	font-weight: 400;
+	font-size: 1rem;
+	margin-top: 2rem;
+}
+
+#Why_choose h1 {
+  font-size: 5rem;
+	/* padding-top: 5rem; */
+}
+
+#Why_choose img {
+  width: 50%;
+}
+
+.red-box {
+  background-color: red;
+	width: 8rem;
+	height: 8rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 3rem;
+	position: relative;
+	margin: 0;
+}
+
+.big-box {
+  transition: transform 100ms ease;
+	height: 100%;
+}
+
+.big-box:hover {
+	transform: scale(1.2);
+}
+
+#Why_choose .wrapped_container {
+  display: flex;
+	align-items: stretch;
+	justify-content: center;
+	position: relative;
+	margin: 7rem 0 4rem 0;
+}
+
+#Why_choose .container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+}
+
+.container {
+  outline: 2px dashed green;
+}
+
+.container>* {
+  outline: 2px dashed blue;
+}
+
+#Why_choose hr {
+	width: 100%;
+	position: absolute;
+	top: 4rem;
+	z-index: -1;
+}
+
+#Why_choose a {
+	position: absolute;
+	height: 8rem;
+	width: 8rem;
+	z-index: 100;
+	opacity: 0;
+	text-decoration: none;
+}
