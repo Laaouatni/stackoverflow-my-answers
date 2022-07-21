@@ -1,0 +1,31 @@
+.App {
+	font-family: sans-serif;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.container {
+	padding: 1rem;
+	margin: 1rem;
+}
+.content {
+	display: grid;
+	grid-template-columns: 80% 20%;
+	margin-top: 2rem;
+	gap: 1rem;
+}
+.wrapper {
+	height: 90vh; /* turn this from string to number, without this "" */
+	border: 1px solid;
+	margin: 1rem;
+}
+.sidebar {
+	border: 1px solid;
+}
+.content img {
+  aspect-ratio: 16/9;
+  width: 100%;
+}
