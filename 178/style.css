@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box; /* this is necessary, so we can't have the scrollbar appearing after setting the height of body*/
+}
+
+body {
+	margin: 0; /* deleting the default margin in body (that create the bug of scrollbar appearing) */
+}
+
+.cards-container {
+	display: flex; /* making element one near the other */
+  height: 100vh; /* setting the height of div to device_height (so we can put them in the end of the page) */
+  align-items: flex-end; /* aligning the cards to the end of the page */
+  justify-content: flex-end; /* aligning the cards to the end of the page */
+  padding: 1rem; /* adding some padding to the end of the page */
+  gap: 1rem; /* adding some gap between the cards */
+}
+
+.card-actions {
+	display: flex;  /* making element one near the other */
+  gap: 1rem;  /* adding some gap between the icons */
+  position: absolute; /* making the actions appear on the top of the card */
+  top: 0.5rem; /* setting the top position of the actions to 0.5rem (so they are not overlapping with the card) */
+  right: 0.5rem; /* setting the right position of the actions to 0.5rem (so they are not overlapping with the card) */
+}
+
+.card {
+  position: relative; /* making the card relative so we can use position absolute in the childs (so we can put the actions on the top of the card) */
+	padding: 24px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.13);
+	background: skyblue;
+	border-radius: 4px;
+	font-family: "Helvetica", sans-serif;
+	display: flex;
+	flex-direction: column;
+	height: 280px;
+	width: 160px;
+}
+
+.card-body {
+	display: flex;
+	flex: 1 0 auto;
+	align-items: flex-end;
+	justify-content: center;
+}
