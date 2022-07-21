@@ -49,6 +49,7 @@ imgData.forEach((thisData) => {
 	function addLinksToIcons() {
 		let newLink = document.createElement("a");
 		newLink.href = actualUrl;
+		newLink.target = "_blank";
 		newLink.appendChild(newIcon);
 		newIconContainer.appendChild(newLink);
 	}
