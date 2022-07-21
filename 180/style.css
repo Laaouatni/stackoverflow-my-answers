@@ -1,0 +1,19 @@
+.inner {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.inner button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background-color: #E3F2FD;
+  color: #304FFE;
+  border: 1px solid #304FFE;
+  padding-block: 5px;
+  padding-inline: 6px;
+  border-radius: 4px;
+  margin-block: 2px;
+  margin-inline: 10px;
+}
