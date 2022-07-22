@@ -1,0 +1,72 @@
+:root {
+	--height: 3rem;
+	--triangle-width: 1rem;
+	--bg: red;
+	--angle: 20deg;
+	--text-color: blue;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+	display: flex;
+	gap: var(--triangle-width);
+	color: var(--text-color);
+	position: relative;
+  margin: 0 var(--triangle-width);
+}
+
+nav::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	background: var(--text-color);
+	height: 0.2rem;
+	width: 100%;
+}
+
+nav div {
+	display: grid;
+	place-items: center;
+	height: var(--height);
+	width: calc(100% - (var(--triangle-width) * 2));
+	position: relative;
+	text-transform: uppercase;
+}
+
+nav div:hover {
+	background-color: var(--bg);
+}
+
+nav div:hover::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: calc(-1 * (var(--triangle-width) / 2));
+	height: var(--height);
+	width: var(--triangle-width);
+	background-color: var(--bg);
+	transform: skewX(calc(-1 * var(--angle)));
+}
+
+nav div:hover::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: calc(-1 * (var(--triangle-width) / 2));
+	height: var(--height);
+	width: var(--triangle-width);
+	background-color: var(--bg);
+	transform: skewX(var(--angle));
+}
+
+nav div::before,
+nav div::after {
+	z-index: -1;
+}
+
+nav::before {
+	z-index: 1;
+}
