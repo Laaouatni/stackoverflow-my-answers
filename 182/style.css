@@ -1,21 +1,24 @@
 :root {
 	--height: 3rem;
 	--triangle-width: 1rem;
-	--bg: red;
+	--bg: #ccc;
 	--angle: 20deg;
-	--text-color: blue;
+	--text-color: black;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 nav {
+	--height-nav: 98vh;
 	display: flex;
 	gap: var(--triangle-width);
 	color: var(--text-color);
 	position: relative;
-  margin: 0 var(--triangle-width);
+	transform: rotate(-90deg) translatex(calc(-1 * var(--height-nav)));
+	transform-origin: left top;
+	width: var(--height-nav);
 }
 
 nav::before {
