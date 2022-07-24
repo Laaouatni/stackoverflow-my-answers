@@ -8,7 +8,7 @@
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
@@ -23,10 +23,10 @@ nav {
 	text-transform: uppercase;
 	font-family: poppins;
 	user-select: none;
-  position: fixed;
-  top: 0; 
-  left: 0;
-  width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
 }
 
 nav .nav-item {
@@ -54,10 +54,10 @@ nav::before {
 }
 
 #container {
-  /* border: 5px solid red; */
-  position: fixed;
-  top: var(--nav-height);
-  height: calc(100vh - var(--nav-height));
+	/* border: 5px solid red; */
+	position: fixed;
+	top: var(--nav-height);
+	height: calc(100vh - var(--nav-height));
 	left: calc(-1 * (var(--index, 0) * 100vw));
 	transition: left var(--anim-speed);
 	display: grid;
@@ -65,8 +65,8 @@ nav::before {
 	grid-auto-columns: 100vw;
 }
 
-#container>* {
-  /* border: 2px solid red; */
+#container > * {
+	/* border: 2px solid red; */
 	height: 100%;
 	width: 100%;
 	overflow: auto;
