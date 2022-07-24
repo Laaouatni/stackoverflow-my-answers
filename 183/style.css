@@ -4,6 +4,7 @@
 	--nav-height: 3rem;
 	--nav-bg: rgb(0, 128, 105);
 	--text-color: white;
+	--anim-speed: 0.5s;
 }
 
 body {
@@ -30,28 +31,6 @@ nav .nav-item:active {
 	background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* nav {
-	position: relative;
-}
-
-nav::before {
-	--total-nav-items: 3;
-	--active-index: 1;
-	--anim-speed: 0.5s;
-	--indicator-width: calc(100% / var(--total-nav-items));
-	--indicator-left-position: calc(var(--active-index) * var(--indicator-width));
-	content: "";
-	background-color: white;
-	height: 0.2rem;
-	width: var(--indicator-width);
-	position: absolute;
-	bottom: 0;
-	left: var(--indicator-left-position);
-	color: red;
-	transition: left var(--anim-speed);
-	box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.3);
-} */
-
 nav {
 	position: relative;
 }
@@ -62,8 +41,11 @@ nav::before {
 	position: absolute;
 	height: 0.2rem;
 	width: 100px;
-	background-color: red;
+	background-color: var(--text-color);
 	bottom: 0;
 	width: var(--indicator-width);
-	left: calc(var(--index) * var(--indicator-width));
+	left: calc(var(--index, 0) * var(--indicator-width));
+	transition: left var(--anim-speed);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }
+
