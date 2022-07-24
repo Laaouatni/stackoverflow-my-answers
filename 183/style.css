@@ -5,6 +5,7 @@
 	--nav-bg: rgb(0, 128, 105);
 	--text-color: white;
 	--anim-speed: 0.5s;
+	color-scheme: light dark;
 }
 
 * {
@@ -33,10 +34,16 @@ nav .nav-item {
 	flex: 1;
 	display: grid;
 	place-items: center;
+	opacity: 0.5;
+	transition: opacity var(--anim-speed);
 }
 
 nav .nav-item:active {
 	background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav .nav-item.active {
+	opacity: 1;
 }
 
 nav::before {
@@ -71,4 +78,11 @@ nav::before {
 	width: 100%;
 	overflow: auto;
 	padding: 0 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+		--nav-bg: rgb(31, 44, 52);
+		--text-color: rgb(9, 148, 115);
+	}
 }
