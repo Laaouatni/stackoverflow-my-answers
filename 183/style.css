@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+:root {
+  --nav-height: 3rem;
+  --nav-bg: rgb(0, 128, 105);
+  --text-color: white;
+}
+
+body {
+	margin: 0;
+}
+
+nav {
+	display: flex;
+  height: var(--nav-height);
+  background-color: var(--nav-bg);
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-family: poppins;
+  user-select: none;
+}
+
+nav .nav-item {
+  flex: 1;
+  display: grid;
+  place-items: center;
+}
+
+nav .nav-item:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
