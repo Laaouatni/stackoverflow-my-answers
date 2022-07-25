@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+:root {
+	--nav-height: 3rem;
+	--nav-bg: rgb(0, 128, 105);
+	--text-color: white;
+	--anim-speed: 0.5s;
+	color-scheme: light dark;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+header {
+	background-color: var(--nav-bg);
+	height: var(--nav-height);
+	display: grid;
+	place-items: center start;
+}
+
+nav {
+	display: flex;
+	height: var(--nav-height);
+	background-color: var(--nav-bg);
+	color: var(--text-color);
+	text-transform: uppercase;
+	font-family: poppins;
+	user-select: none;
+	/* position: fixed; */
+	/* top: 0; */
+	/* left: 0; */
+	position: sticky;
+	top: 0;
+	width: 100vw;
+}
+
+nav .nav-item {
+	flex: 1;
+	display: grid;
+	place-items: center;
+	opacity: 0.5;
+	transition: opacity var(--anim-speed);
+}
+
+nav .nav-item:active {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav .nav-item.active {
+	opacity: 1;
+}
+
+nav::before {
+	--indicator-width: calc(100% / var(--total-nav-items));
+	content: "";
+	position: absolute;
+	height: 0.2rem;
+	width: 100px;
+	background-color: var(--text-color);
+	bottom: 0;
+	width: var(--indicator-width);
+	left: calc(var(--index, 0) * var(--indicator-width));
+	transition: left var(--anim-speed);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+#container {
+	/* border: 5px solid red; */
+	/* position: fixed; */
+	position: relative;
+	z-index: -1;
+	/* height: calc(100vh - var(--nav-height)); */
+	left: calc(-1 * (var(--index, 0) * 100vw));
+	transition: left var(--anim-speed);
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 100vw;
+}
+
+#container > * {
+	/* border: 2px solid red; */
+	height: calc(100vh - var(--nav-height));
+	padding: 0 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+		--nav-bg: rgb(31, 44, 52);
+		--text-color: rgb(9, 148, 115);
+	}
+}
