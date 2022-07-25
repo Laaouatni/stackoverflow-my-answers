@@ -14,8 +14,7 @@
 
 body {
 	margin: 0;
-	overflow-y: auto;
-	overflow-x: hidden;
+ 	overflow: hidden;
 }
 
 header {
@@ -86,8 +85,10 @@ nav::before {
 
 #container > * {
 	/* border: 2px solid red; */
-	height: calc(100vh - var(--nav-height));
+	height: min-content;
+	min-height: calc(100vh - (var(--nav-height) * 2));
 	padding: 0 1rem;
+	/* border: 5px solid red; */
 }
 
 @media (prefers-color-scheme: dark) {
