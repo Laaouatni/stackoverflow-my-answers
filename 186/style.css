@@ -34,6 +34,12 @@ header {
 	display: flex;
 	align-items: center;
 	padding: 0 1rem;
+	justify-content: space-between;
+}
+
+#header-icons-container {
+	display: flex; 
+	gap: 1rem;
 }
 
 nav {
@@ -68,6 +74,11 @@ nav::before {
 	display: grid;
 	place-items: center;
 	user-select: none;
+	opacity: 0.5;
+}
+
+.nav-item.active {
+	opacity: 1;
 }
 
 .nav-item:active {

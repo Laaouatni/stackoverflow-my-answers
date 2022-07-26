@@ -5,7 +5,8 @@ document.body.style.setProperty("--total-nav-items", navItems.length);
 navItems.forEach((thisItem, index) => {
   thisItem.addEventListener("click", () => {
     document.body.style.setProperty("--active-index", index);
-    toogleScrollBar() 
+    toogleActiveClass();
+    toogleScrollBar(); 
 
     function toogleScrollBar() {
       let thisSection = document.querySelectorAll('#container>*')[index];
@@ -21,6 +22,13 @@ navItems.forEach((thisItem, index) => {
         document.querySelector(":root").style.setProperty("--nav-width", "100vw");
         window.scrollTo(0, 0);
       }
+    }
+
+    function toogleActiveClass() {
+      navItems.forEach(item => {
+        item.classList.remove('active');
+      });
+      thisItem.classList.add('active');
     }
   });
 });
