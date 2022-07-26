@@ -2,19 +2,21 @@
 
 :root {
 	--nav-height: 3rem;
-	--nav-width: 100vw;
+  --nav-width: 100vw;
 	--bg-color: rgb(0, 128, 105);
 	--text-color: white;
-	--anim-speed: 0.5s;
+  --anim-speed: 0.5s;
 
-	--total-nav-items: 0;
-	--active-index: 0;
-	/* dark mode */
-	color-scheme: light dark;
+  --total-nav-items: 0;
+  --active-index: 0;
+  /* dark mode */
+  color-scheme: light dark;
+
+	scroll-behavior: smooth;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -23,11 +25,9 @@ body {
 	overflow: hidden;
 }
 
-nav,
-header {
+header, nav {
 	background-color: var(--bg-color);
 	height: var(--nav-height);
-	width: var(--nav-width);
 }
 
 header {
@@ -38,24 +38,28 @@ header {
 
 nav {
 	display: flex;
-	color: var(--text-color);
+  width: var(--nav-width);
 	text-transform: uppercase;
+	color: var(--text-color);
 	position: sticky;
 	top: 0;
 	z-index: 1;
+	/* position: fixed;
+  top: 0;
+  left: 0; */
 }
 
 nav::before {
-	--indicator-width: calc(var(--nav-width) / var(--total-nav-items));
-	content: "";
+  --indicator-width: calc(var(--nav-width) / var(--total-nav-items)) ;
+  content: "";
 	position: absolute;
-	bottom: 0;
-	left: calc(var(--active-index) * var(--indicator-width));
-	background-color: var(--text-color);
-	height: 0.2rem;
-	width: var(--indicator-width);
-	transition: left var(--anim-speed);
-	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  left: calc(var(--active-index) * var(--indicator-width));
+  background-color: var(--text-color);
+  height: 0.2rem;
+  width: var(--indicator-width);
+  transition: left var(--anim-speed);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 .nav-item {
@@ -70,24 +74,28 @@ nav::before {
 	background-color: rgba(255, 255, 255, 0.3);
 }
 
+
 #container {
+/*   position: fixed;
+  top: var(--nav-height); */
 	position: relative;
-	display: grid;
-	grid-auto-flow: column;
-	grid-auto-columns: var(--nav-width);
-	left: calc(-1 * (var(--active-index) * var(--nav-width)));
-	transition: left var(--anim-speed);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: var(--nav-width);
+  left: calc(-1 * (var(--active-index) * var(--nav-width)));
+  transition: left var(--anim-speed);
+}
+
+#container>*{
+  padding: 0 1rem;
+	/* border: 5px solid red; */
+	height: min-content;
 	min-height: calc(100vh - (var(--nav-height) * 2));
 }
 
-#container > * {
-	height: min-content;
-	padding: 0 1rem;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--bg-color: rgb(31, 44, 52);
-		--text-color: rgb(8, 164, 128);
-	}
+@media(prefers-color-scheme: dark) {
+  :root {
+    --bg-color: rgb(31, 44, 52);
+	  --text-color: rgb(8, 164, 128);
+  }
 }
