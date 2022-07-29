@@ -3,3 +3,7 @@
   grid-auto-flow: column; /* element side by side like flexbox */
   place-items: start center; /* centering the justify, but align in start */
 }
+
+.footer-email {
+  margin-right: 266px; /* put here the value you want */
+}
