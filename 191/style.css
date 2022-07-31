@@ -1,0 +1,19 @@
+nav {
+  display: flex;
+}
+
+.item {
+  /* square */
+  height: 10rem;
+  width: 10rem;
+
+  display: flex;
+}
+
+.item > * {
+  flex: 1;
+}
+
+.another {
+  display: grid;
+}

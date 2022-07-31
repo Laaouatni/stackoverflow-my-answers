@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+#container {
+  border: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 50vh;
+  resize: vertical;
+  overflow: auto;
+  gap: 10px; /* if you want like before, here in gap: write 20px */
+  padding: 10px;
+}
+
+#red-container, #green-container {
+  display: grid;
+  resize: horizontal;
+  overflow: auto;
+}
+
+#red-container {
+  border: 1px solid red;
+}
+
+#green-container {
+  border: 1px solid green;
+}
+
+.container-item {
+  padding: 10px;
+  border: 1px solid black;
+}
