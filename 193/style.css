@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  --small-font: 1rem;
+  /* font-family: poppins; don't use poppins, it isn't the best font because is not centered by default (maybe use it only when you use a transform: translateY(-0.1rem); or similar) */
+  display: flex;
+  gap: 1rem;
+}
+
+.item {
+  display: grid;
+}
+
+.price-container {
+  display: flex;
+  /* add this to make them near each other */
+  align-items: center;
+}
+
+.second-price-container {
+  display: grid;
+  font-size: var(--small-font);
+}
+
+.price-big {
+  /* for making this work, don't do 2 but try with 2.5 instead... because it always remain a little gap, so you need to count also that */
+  --big-font: calc(var(--small-font) * 2.5);
+  font-size: var(--big-font);
+}
+
+/* delete the padding on the bottom and top of <span> elements */
+.second-price-container,
+.price-big {
+  line-height: 1;
+}
+
+/* don't us this ::before trick, I think is better to use manually write it in html so it will be more readible */
+/* .price-small::before {
+  content: ".";
+} */
+
+.item .date {
+  color: blue;
+}
