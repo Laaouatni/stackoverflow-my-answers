@@ -1,0 +1,17 @@
+.grid_container {
+  display: grid;
+}
+
+.flex_container {
+  display: flex;
+}
+
+.flex_container>* {
+  flex: 1;
+}
+
+.card {
+  border: 1px dashed red;
+  display: grid;
+  place-items: center;
+}
