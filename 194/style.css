@@ -1,0 +1,57 @@
+* {
+  /* this is important so image don't go outside the card div after writing 100% with padding */
+  box-sizing: border-box; 
+}
+
+.row_4 {
+  display: flex;
+  background-color: #f9f8fd;
+  /* with this type of card, normally we try to make them responsive by width, not height. so is good having a static value here */
+  /* the card is 10rem (since I counted that you are using 15%, and my screen is 999px so 15% of 999px is 150px, that translate to 10rem (1rem = 16px)  */
+  height: 10rem;
+  border-radius: 1rem;
+}
+
+.pfp img {
+  /* this 100% will only work if you added on the top box-sizing */
+  /* because the height then it will be 10rem - (0.5rem * 2)  */
+  height: 100%;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.info {
+  display: flex;
+  /* this make them like grid behaviur, but in flexbox */
+  flex-direction: column;
+  /* in the html a wrapped the first two elements in one div, so this will work */
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+}
+
+
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* so the .action can have all the width that remains, to can be centered responsivelly */
+  flex: 1;
+  gap: 1rem;
+  color: orange;
+}
+
+/* not important this next lines, just styling */
+
+.info .name {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.info .number {
+  opacity: 0.5;
+}
+
+/* .row_4 > * {
+  border: 1px dashed red;
+} */
