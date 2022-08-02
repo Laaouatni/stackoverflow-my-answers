@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form action="">
+      <p class="form-title">Field marked with * are required</p>
+
+      <!-- the trick here is to put first the input then the span
+      in css we will use visually correct it, and also we can use the required pseudoclass without any problem -->
+      <div class="form-group">
+        <!-- 1 -->
+        <label for="name-input">
+          <input type="text" id="name-input" placeholder="your name" />
+          <span>Your name</span>
+        </label>
+
+        <!-- 2 -->
+        <label for="email-input">
+          <!-- you see here is required -->
+          <input
+            required
+            type="email"
+            id="email-input"
+            placeholder="email@example.com"
+          />
+          <span>E-mail</span>
+        </label>
+
+        <!-- 3 -->
+        <label for="number-input">
+          <input type="number" id="number-input" placeholder="+012345678" />
+          <span>Number</span>
+        </label>
+      </div>
+    </form>
+  </body>
+</html>

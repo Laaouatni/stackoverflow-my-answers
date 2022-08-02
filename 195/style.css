@@ -1,0 +1,64 @@
+:root {
+  --bg-color: rgb(245, 250, 249);
+  --label-color: rgb(224, 240, 232);
+  --text-color: rgb(132, 157, 150);
+  --padding: 0.5rem;
+}
+
+/* the solution for adding that * red */
+.form-group input:required + span::before {
+  content: "*";
+  color: red;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form {
+  background-color: var(--bg-color);
+  padding: var(--padding);
+  border: calc(var(--padding) / 2) solid var(--label-color);
+  display: grid;
+  gap: calc(var(--padding) * 3);
+}
+
+.form-group {
+  display: grid;
+  gap: var(--padding);
+}
+
+.form-group label {
+  display: flex;
+  gap: var(--padding);
+  /* here we make the span in the left, and input in the right */
+  /* I use this technique since if we put the span before the + in the selector will not work */
+  flex-direction: row-reverse;
+}
+
+.form-group label span {
+  background-color: var(--label-color);
+  padding: var(--padding);
+  color: var(--text-color);
+  display: flex;
+  /* making the span text in the right, near the input */
+  justify-content: flex-end;
+}
+
+.form-group label > * {
+  /* 50%, 50% */
+  flex: 1;
+}
+
+.form-group input {
+  border: 2px solid var(--label-color);
+}
+
+.form-title {
+  background-color: var(--label-color);
+  border: 2px dashed var(--text-color);
+  padding: var(--padding);
+  font-weight: bold;
+  /* p tags have a margin, and we will delete it with this */
+  margin: 0; 
+}
