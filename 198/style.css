@@ -1,0 +1,67 @@
+:root {
+  --slot1Rotate: 0;
+}
+html,
+body {
+  perspective: 600;
+  background-color: #282a3a;
+  /* centering perfectly */
+  place-items: center;
+  display: grid;
+  height: 100vh;
+  margin: 0;
+}
+
+.machine {
+  /* top: 10rem; */
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.slots {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.slot-machine {
+  width: 120px;
+  height: 120px;
+  list-style: none;
+  padding: 0;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.animation {
+  animation-name: x-spin;
+  animation-duration: 5s;
+  transition-duration: 3s;
+  transition-delay: 1s;
+}
+
+.slot_item {
+  height: 100px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.832);
+  backface-visibility: hidden;
+}
+
+@keyframes x-spin {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotatex(360deg);
+  }
+}
