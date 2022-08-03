@@ -6,7 +6,7 @@ let spinBtn = document.querySelector("#spinBtn");
 let machines = document.querySelectorAll(".slot-machine");
 
 /* math data */
-let degree1 = 505;
+let degree1 = 310; // before was 505 (309 center correcly)
 let paneSize = 100;
 let zDepth = paneSize / (2 * Math.tan(Math.PI / panes.length));
 
@@ -23,6 +23,7 @@ machines.forEach((thisMachine) => {
 
   /* animation end logic */
   thisMachine.addEventListener("animationend", () => {
+    /* for making animation run every time on click, because you can't add a class if there is the same class before */
     thisMachine.classList.remove("animation");
     thisMachine.style.transform = `rotateX(${degree1}deg)`;
   });

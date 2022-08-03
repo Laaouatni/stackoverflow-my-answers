@@ -1,19 +1,19 @@
 :root {
   --slot1Rotate: 0;
 }
+
 html,
 body {
   perspective: 600;
   background-color: #282a3a;
-  /* centering perfectly */
-  place-items: center;
+  /* centering */
   display: grid;
+  place-items: center;
   height: 100vh;
   margin: 0;
 }
 
 .machine {
-  /* top: 10rem; */
   display: flex;
   gap: 10px;
   align-items: center;
@@ -26,6 +26,7 @@ body {
   gap: 10px;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .slot-machine {
@@ -35,6 +36,8 @@ body {
   padding: 0;
   position: relative;
   transform-style: preserve-3d;
+  /* default position (from js code) */
+  transform: rotateX(var(--slot1Rotate));
 }
 
 .animation {
@@ -57,11 +60,21 @@ body {
   backface-visibility: hidden;
 }
 
+/* added animation keyframes */
 @keyframes x-spin {
   0% {
     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   }
   100% {
-    transform: rotatex(360deg);
+    /* with the variable changed by js */
+    transform: rotatex(var(--slot1Rotate));
   }
+}
+
+.slot1 {
+}
+
+.slot2 {
+}
+.slot3 {
 }
