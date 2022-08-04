@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --nav-height: 3rem;
+  --nav-width: 100vw;
+
+  --nav-bg: #202020;
+
+  --nav-icon-height: calc(var(--nav-height) - 0.5rem);
+
+  --height-without-nav: calc(100vh - var(--nav-height));
+
+  --wallpaper-bg-link: url("https://i.stack.imgur.com/dHg5Q.jpg");
+}
+
+body,
+nav,
+#container {
+  width: var(--nav-width);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+.wallpaper {
+  background-image: var(--wallpaper-bg-link);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+nav {
+  /* border: 3px solid red; */
+  height: var(--nav-height);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: var(--nav-bg);
+  color: white;
+  display: flex;
+}
+
+nav > * {
+  border: 1px solid red;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-nav-container {
+  flex: 1;
+  gap: 1rem;
+}
+
+.first-nav-container .icon {
+  height: var(--nav-icon-height);
+  width: var(--nav-icon-height);
+  border: 1px solid red;
+}
+
+.first-nav-container.flex-center .icon {
+  display: grid;
+  place-items: center;
+}
+
+#container {
+  /* border: 3px solid blue; */
+  height: var(--height-without-nav);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
