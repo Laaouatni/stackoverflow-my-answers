@@ -1,0 +1,63 @@
+.body-full {
+  height: 100vh;
+  margin: 0;
+}
+
+.centered {
+  display: grid;
+  place-items: center;
+}
+
+.pos--relative {
+  position: relative;
+}
+
+.container {
+  --height: 500px;
+  width: min-content;
+  background-image: url("https://picsum.photos/500");
+  height: var(--height);
+  width: var(--height);
+}
+
+.bg-image {
+  background-image: url("https://picsum.photos/500");
+}
+
+.inner-childs {
+  display: grid;
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  right: 0;
+}
+
+.box {
+  display: grid;
+  place-items: center;
+}
+
+.btn-recipe {
+  position: absolute;
+  bottom: -1rem;
+  left: -1rem;
+}
+
+.box--green {
+  background: green;
+}
+
+.box--blue {
+  background: blue;
+}
+
+.box--yellow {
+  background: yellow;
+}
+
+.btn {
+  border: 1px solid black;
+  background: black;
+  color: white;
+  padding: 6px;
+}

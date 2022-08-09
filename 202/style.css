@@ -1,0 +1,13 @@
+.icon {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.icon {
+  background-image: url("https://picsum.photos/200");
+  background-position: right center;
+  background-repeat: no-repeat;
+  min-width: 200px;
+  width: 200px;
+}
