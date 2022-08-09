@@ -1,3 +1,11 @@
+:root {
+  /* change this values to make it more custum */
+  --height: 500px;
+  --width-childs: 40%;
+  --outside-value: 1rem;
+  --image-url: url("https://picsum.photos/1000")
+}
+
 .body-full {
   height: 100vh;
   margin: 0;
@@ -12,35 +20,34 @@
   position: relative;
 }
 
+.pos--absolute {
+  position: absolute;
+}
+
 .container {
-  --height: 500px;
-  width: min-content;
-  background-image: url("https://picsum.photos/500");
   height: var(--height);
   width: var(--height);
 }
 
 .bg-image {
-  background-image: url("https://picsum.photos/500");
+  background-image: var(--image-url);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.inner-childs {
+.right-childs {
   display: grid;
-  height: 100%;
-  width: 50%;
-  position: absolute;
+  height: calc(100% + var(--outside-value));
+  width: var(--width-childs);
   right: 0;
 }
 
-.box {
-  display: grid;
-  place-items: center;
-}
-
-.btn-recipe {
+.outside-position {
+  --negative-outside-position: calc(var(--outside-value) * -1);
   position: absolute;
-  bottom: -1rem;
-  left: -1rem;
+  bottom: var(--negative-outside-position);
+  left: var(--negative-outside-position);
 }
 
 .box--green {
