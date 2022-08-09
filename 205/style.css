@@ -5,7 +5,7 @@
 }
 
 body {
-  /* --trick-width: 10rem; */
+  /* --shadow-width: 10rem; */
   /* add this so body will be equal to the device height */
   height: 100vh;
   /* solving the bug of scrollbar appear */
@@ -16,6 +16,8 @@ body {
 #container {
   height: 100%;
   width: 100%;
+  /* if the shadow is outside the window, then the scrollbar will not appear */
+  overflow: hidden;
 }
 
 /* if you have some elements inside #container, then uncomment the following */
@@ -33,25 +35,27 @@ body {
   background-attachment: fixed;
 }
 
-/* making the image dark so we can see the white trick shadow */
+/* making the image dark so we can see the white shadow shadow */
 #container {
   filter: brightness(0.5);
 }
 
-/* trick element is a pseudoelement */
+/* shadow element is a pseudoelement */
 #container::before {
   content: "";
   position: absolute;
   /* position and move the element */
   top: var(--y);
   left: var(--x);
+  /* center it to the mouse position */
+  transform: translate(-50%, -50%);
   /* setting the height and width */
-  width: var(--trick-width);
-  height: var(--trick-width);
+  width: var(--shadow-width);
+  height: var(--shadow-width);
   /* circular shapes */
-  border-radius: var(--trick-width);
+  border-radius: var(--shadow-width);
   /* shadow, more the 0.4 is bigger more is invisible, I think a value between 0.3/0.5 is good */
-  filter: blur(calc(var(--trick-width) * 0.4)); 
+  filter: blur(calc(var(--shadow-width) * 0.4));
   /* white color gradient from visible to invisible */
   background: radial-gradient(circle, rgba(255, 255, 255, 1), transparent);
   /* to make sure that is always on top of elements inside #container */
