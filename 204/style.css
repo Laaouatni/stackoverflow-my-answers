@@ -1,0 +1,27 @@
+body {
+  /* setting the height to the device height */
+  height: 100vh;
+  /* solving the bug about scrollbar */
+  margin: 0;
+  /* using margin auto, basically you don't need to write align-items: center; in body it will automatically work */
+  /* so just use flexbox and it will work fine */
+  display: flex;
+}
+
+.container {
+  background-image: url(paperbackground.jpg);
+  color: #d64933;
+  margin: auto;
+  /* for deleting the wrapping thing don't use this 500px line below */
+  width: 500px;
+}
+
+.box {
+  align-content: center;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  justify-content: center;
+  padding: 2px;
+}
