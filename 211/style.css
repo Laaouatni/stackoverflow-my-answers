@@ -1,0 +1,9 @@
+.main-header {
+  height: 95px;
+  background-image: linear-gradient(
+      to right bottom,
+      rgb(10, 132, 255, 0.8),
+      rgb(59, 215, 75, 0.8)
+    ),
+    url("https://picsum.photos/300");
+}
