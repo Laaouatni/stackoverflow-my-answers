@@ -1,0 +1,4 @@
+.grey {
+  filter: grayscale(100%);
+  /* other styles if I want to add them */
+}
