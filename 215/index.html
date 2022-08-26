@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- 0 -->
+      <div class="row">
+        <button>Click</button>
+      </div>
+      <!-- 1 -->
+      <div class="row">
+        <button>Click</button>
+
+        <!-- only first button will work using :first-child -->
+        <button>this don't have event</button>
+        <button>also this don't have event</button>
+      </div>
+      <!-- 2 -->
+      <div class="row">
+        <button>Click</button>
+      </div>
+    </div>
+
+    <script>
+      // only buttons that are inside .row class container
+      // only buttons that are inside .row class container
+
+      // if you use :first-child or :last-child inside the selector,
+      // the if there is 2 buttons it will add the event only in one
+      // and this means the index is always correct!!
+      let RowButtons = document.querySelectorAll(".row button:first-child");
+
+      // for loop
+      RowButtons.forEach((btn, index) => {
+        // adding click event
+        btn.addEventListener("click", () => {
+          // getting the index of the button (technically is the same index of the .row)
+          console.log(document.querySelectorAll(".row")[index]);
+        });
+      });
+    </script>
+  </body>
+</html>
