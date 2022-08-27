@@ -1,0 +1,5 @@
+.container-fluid img {
+  height: 100vh; /* vh-100 class */
+  width: 100%; /* w-100 class */
+  object-fit: cover;
+}
