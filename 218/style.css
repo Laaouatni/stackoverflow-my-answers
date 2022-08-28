@@ -1,0 +1,50 @@
+/* the most important part is here, the other also only css designs */
+#container #img-container {
+  /* src get changed automatically by javascript */
+  background-image: var(--src);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* centering vertically and horizontally */
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* container responsive */
+#container {
+  width: 80vmin;
+  height: 80vmin;
+}
+
+#container {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+#container {
+  /* make image bigger, buttons smaller */
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 1rem;
+}
+
+/* button flexbox */
+#btn-container {
+  display: flex;
+  gap: 1rem;
+}
+
+/* buttons responsive width  */
+#btn-container button {
+  flex: 1;
+}

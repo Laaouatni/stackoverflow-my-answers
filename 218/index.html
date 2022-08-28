@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="img-container" style="--src: https://picsum.photos/500">
+        <!-- here it will be a image -->
+      </div>
+
+      <div id="btn-container">
+        <button title="previus" onclick="prev();">⬅️</button>
+        <button title="next" onclick="next()">➡️</button>
+      </div>
+    </div>
+
+    <!-- just change the array :) -->
+    <script>
+      /* here put all your img urls */
+      let imgArray = [
+        "https://picsum.photos/1000" /* 0 */,
+        "https://picsum.photos/1001" /* 1 */,
+        "https://picsum.photos/1002" /* 2 */,
+        "https://picsum.photos/1003" /* 3 */,
+        "https://picsum.photos/1004" /* ... */,
+        "https://picsum.photos/1005",
+        "https://picsum.photos/1006",
+        "https://picsum.photos/1007",
+        "https://picsum.photos/1008",
+        "https://picsum.photos/1009",
+        "https://picsum.photos/1010",
+        "https://picsum.photos/1011",
+        "https://picsum.photos/1012",
+        "https://picsum.photos/1013",
+        "https://picsum.photos/1014",
+        "https://picsum.photos/1015",
+        "https://picsum.photos/1016",
+        "https://picsum.photos/1017",
+        "https://picsum.photos/1018",
+        "https://picsum.photos/1019",
+        "https://picsum.photos/1020",
+      ];
+    </script>
+
+    <!-- make sure to import the script at the end, or after the array in html -->
+    <script src="script.js"></script>
+  </body>
+</html>
