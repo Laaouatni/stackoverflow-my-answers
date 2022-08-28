@@ -41,5 +41,5 @@ function changeImg() {
   let choosedImg = imgArray[id] ? imgArray[id] : resetId();
 
   /* changing a css variable */
-  img.style.setProperty("--src", `url(${choosedImg})`);
+  img.style.setProperty("--src", `url("${choosedImg}")`);
 }

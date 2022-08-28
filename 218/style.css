@@ -51,10 +51,4 @@ body {
 
 #img-container {
   border-radius: 0.5rem;
-  transition: transform 0.1s ease-in-out;
-}
-
-#img-container:active {
-  transform: scale(1.05) rotate(3deg);
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
 }
