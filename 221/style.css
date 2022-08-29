@@ -1,0 +1,68 @@
+body {
+  background-color: grey;
+}
+
+.eye-outline,
+.eye-white,
+.iris,
+.pupil,
+.iris-outline {
+  border-radius: 50%;
+}
+
+.eye-outline {
+  position: relative;
+}
+
+/* the most important part, centering correctly */
+.eye-white,
+.iris,
+.pupil,
+.iris-outline {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.eye-outline, 
+.iris-outline,
+.pupil {
+  background-color: black;
+}
+
+.eye-outline {
+  width: 600px;
+  height: 350px;
+}
+
+.eye-white {
+  width: 580px;
+  height: 330px;
+  background-color: white;
+}
+
+.iris-outline {
+  width: 325px;
+  height: 325px;
+}
+
+.iris {
+  width: 300px;
+  height: 300px;
+  background-color: blue;
+}
+
+.pupil {
+  width: 150px;
+  height: 150px;
+}
+
+/* not important, only debugging purposes */
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
