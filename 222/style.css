@@ -32,30 +32,30 @@ body {
 }
 
 .eye-outline {
-  width: 60vmin;
-  height: 35vmin;
+  width: 80vmin;
+  height: 55vmin;
 }
 
 .eye-white {
-  width: 58vmin;
-  height: 33vmin;
+  width: 78vmin;
+  height: 53vmin;
   background-color: white;
 }
 
 .iris-outline {
-  width: 32vmin;
-  height: 32vmin;
+  width: 52.5vmin;
+  height: 52.5vmin;
 }
 
 .iris {
-  width: 30vmin;
-  height: 30vmin;
+  width: 50vmin;
+  height: 50vmin;
   background-color: blue;
 }
 
 .pupil {
-  width: 15vmin;
-  height: 15vmin;
+  width: 35vmin;
+  height: 35vmin;
 }
 
 /* not important, only debugging purposes */
