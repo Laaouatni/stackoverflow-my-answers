@@ -1,16 +1,19 @@
 let inputs = document.querySelectorAll("textarea");
 let langs = ["html", "css", "javascript"];
 
+let outputs = document.querySelectorAll("code");
+
 inputs.forEach((input, index) => {
-  // if the code is saved before, it will get that
-  input.textContent = localStorage.getItem(`${langs[index]}`) || "";
+  input.value = localStorage.getItem(`${langs[index]}`) || "";
+  updateCode(input, index);
 
-  // every time the input is changed we save and ovveride the past value
   input.addEventListener("input", () => {
-    // we save the data locally,
-    // and if the user reopens the websiste the data is still in the database.
     localStorage.setItem(`${langs[index]}`, input.value);
-
-    hljs.highlightElement(input);
+    updateCode(input, index);
   });
 });
+
+function updateCode(input, index) {
+  outputs[index].textContent = input.value;
+  hljs.highlightElement(outputs[index]);
+}

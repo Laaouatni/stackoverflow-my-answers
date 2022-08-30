@@ -1,4 +1,5 @@
 body {
+  --gap: 2vmin;
   margin: 0;
   height: 100vh;
 }
@@ -6,12 +7,19 @@ body {
 #container {
   display: flex;
   height: 100%;
-  gap: 1vmin;
-  padding: 1vw;
+  gap: var(--gap);
+  padding: var(--gap);
   box-sizing: border-box;
 }
 
-#container > textarea {
+#container > div {
   flex: 1;
-  padding: 1vw;
+  display: grid;
+  grid-auto-rows: 1fr;
+  gap: var(--gap);
+}
+
+code {
+  overflow: scroll;
+  white-space: pre;
 }

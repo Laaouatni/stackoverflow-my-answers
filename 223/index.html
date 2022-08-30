@@ -9,10 +9,37 @@
   </head>
   <body>
     <div id="container">
-      <textarea id="html-input" placeholder="html code here..."></textarea>
-      <textarea id="css-input" placeholder="css code here..."></textarea>
-      <textarea id="js-input" placeholder="javascript code here"></textarea>
+      <!-- 0 -->
+      <div>
+        <textarea
+          id="html-input"
+          placeholder="html code here..."
+        ></textarea>
+
+        <code class="language-html"></code>
+      </div>
+      <!-- 1 -->
+      <div>
+        <textarea
+          id="css-input"
+          placeholder="css code here..."
+        ></textarea>
+
+        <code class="language-css"></code>
+      </div>
+      <!-- 2 -->
+      <div>
+        <textarea id="js-input" placeholder="javascript code here"></textarea>
+
+        <code class="language-js"></code>
+      </div>
     </div>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
 
     <script src="./script.js"></script>
   </body>
