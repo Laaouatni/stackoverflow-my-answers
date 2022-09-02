@@ -37,6 +37,10 @@ export default function generateCard() {
         multiplication();
       }
 
+      card.scrollIntoView({
+        behavior: "smooth",
+      });
+
       function addiction() {
         card.querySelector(".operator").textContent = "+";
         output.textContent = addZeroPrefix(arrRandom.reduce((a, b) => a + b));
@@ -58,9 +62,7 @@ export default function generateCard() {
     if (num < 10) {
       return `0${num}`;
     }
-  
+
     return num;
   }
 }
-
-
