@@ -12,14 +12,14 @@ body {
   box-sizing: border-box;
 }
 
-#container > div {
+#container > * {
   flex: 1;
   display: grid;
-  grid-auto-rows: 1fr;
+  grid-template-rows: auto 1fr;
   gap: var(--gap);
 }
 
 code {
-  overflow: scroll;
+  overflow: auto;
   white-space: pre;
 }
