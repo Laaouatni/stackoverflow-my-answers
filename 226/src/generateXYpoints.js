@@ -4,6 +4,7 @@ export default function generateXYpoints(arr) {
   let container = document.querySelector("#container>*");
   container.innerHTML = '';
 
+  console.log(arr)
   arr.forEach((el) => {
     let newPoint = appendPoint(container);
     newPoint.classList.add("absolute");
