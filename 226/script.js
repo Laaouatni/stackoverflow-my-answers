@@ -1,5 +1,5 @@
 import generateGraph from "./src/generateGraph.js";
-const formula = "1*(x*x)+1*x";
+const formula = "1*x*x+1*x";
 
 generateGraph(formula, 10);
 
