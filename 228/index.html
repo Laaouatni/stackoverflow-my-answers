@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex h-screen">
+    <!-- original -->
+    <button
+      class="m-auto p-4 rounded-md bg-blue-200 transition hover:bg-blue-400 hover:-translate-y-2 hover:-translate-x-2 hover:scale-110 hover:shadow-2xl hover:shadow-blue-40 hover:text-white"
+    >
+      original
+    </button>
+    <!-- with script -->
+    <button
+      class="m-auto p-4 rounded-md bg-blue-200 transition"
+      data-hover="bg-blue-400 -translate-y-2 -translate-x-2 scale-110 shadow-2xl shadow-blue-40 text-white"
+    >
+      with script
+    </button>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
