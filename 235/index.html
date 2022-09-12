@@ -5,20 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
   </head>
-  <body>
-    <button class="myBtn">first button</button>
-    <button class="myBtn">second button</button>
-    <button class="myBtn">third button</button>
+  <body class="h-screen grid place-items-center bg-gray-200 overflow-hidden">
+    <div class="flex gap-[5vmin]">
+      <button
+        title="🎶 Left sound"
+        class="transition hover:-translate-y-1 hover:shadow-2xl focus:rotate-3 hover:border-blue-200 hover:shadow-blue-200 focus:border-blue-500 focus:shadow-blue-500 border-4 border-blue-50 shadow-md p-[10vmin] bg-white rounded-[3vmin] text-[10vmin] text-blue-500 after:content-[attr(title)] relative after:absolute after:text-sm after:-bottom-20 after:left-0 after:w-max after:bg-white after:shadow-lg after:-translate-x-[50%] after:left-[50%] after:px-4 after:py-2 after:rounded-lg after:opacity-0 focus:after:opacity-100 focus:after:duration-500 after:translate-y-12 focus:after:translate-y-0 focus:after:animate-pulse focus:animate-bounce"
+        onclick="playSound({left:true})"
+      >
+        🡰
+      </button>
+      <button
+        title="🎶 Right sound"
+        class="transition hover:-translate-y-1 hover:shadow-2xl focus:rotate-3 hover:border-blue-200 hover:shadow-blue-200 focus:border-blue-500 focus:shadow-blue-500 border-4 border-blue-50 shadow-md p-[10vmin] bg-white rounded-[3vmin] text-[10vmin] text-blue-500 after:content-[attr(title)] relative after:absolute after:text-sm after:-bottom-20 after:left-0 after:w-max after:bg-white after:shadow-lg after:-translate-x-[50%] after:left-[50%] after:px-4 after:py-2 after:rounded-lg after:opacity-0 focus:after:opacity-100 focus:after:duration-500 after:translate-y-12 focus:after:translate-y-0 focus:after:animate-pulse focus:animate-bounce"
+        onclick="playSound({right:true})"
+      >
+        🡲
+      </button>
 
-    <script>
-      let btns = document.querySelectorAll(".myBtn");
+      <script>
+        function playSound(options) {
+          const choosedDirection = () => {
+            return Object.keys(options)
+              .reverse()
+              .find(
+                (direction) => direction === "left" || direction === "right",
+              );
+          };
 
-      btns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          alert("hello");
-        });
-      });
-    </script>
+          const audio = new Audio("audio.mp3");
+
+          switch (choosedDirection()) {
+            case "left":
+              audio.play();
+              // how to make here play only on the left side
+              // by making the volume high on the left and 0 on the right
+              break;
+            case "right":
+              audio.play();
+              // how to make here play only on the right side
+              // by making the volume high on the right and 0 on the left
+              break;
+          }
+        }
+      </script>
+    </div>
   </body>
 </html>
