@@ -18,7 +18,7 @@ function styleRange(input) {
   }
 
   function calcBeforeWidth(input) {
-    return (Math.abs(input.value) * widthPerStep(input)).toFixed(2);
+    return (Math.abs(input.value) * widthPerStep(input));
   }
 
   function widthPerStep(input) {
@@ -42,7 +42,8 @@ function styleRange(input) {
   function calcPositionLeft(input) {
     const style = window.getComputedStyle(input);
     const totalWidth = parseFloat(style.getPropertyValue("width"));
-    if (input.getAttribute("value") > input.value)
+    
+    if (input.getAttribute("value") >= input.value)
       return (totalWidth / 2) - calcBeforeWidth(input);
     return totalWidth / 2;
   }

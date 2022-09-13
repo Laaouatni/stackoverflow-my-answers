@@ -6,19 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
-  <body class="h-screen grid place-items-center bg-gray-500">
-    <div
-      class="parent-input before:w-[50px] before:left-[50%] before:pointer-events-none before:rounded-lg grid relative before:absolute before:top-0 before:h-2 before:bg-red-500"
-    >
-      <input
-        class="h-2 rounded-lg appearance-none"
-        type="range"
-        min="-10"
-        value="0"
-        max="10"
-      />
+  <body>
+    <div class="parent-input">
+      <input type="range" min="-10" value="0" max="10" />
+    </div>
+    
+    <div class="parent-input">
+      <input type="range" min="-16" value="0" max="16" />
     </div>
 
     <style>
@@ -32,8 +27,6 @@
 
       .parent-input {
         --input-height: 0.5rem;
-        /* height: var(--input-height); */
-        outline: 1px solid red;
         position: relative;
         display: flex;
       }
@@ -42,9 +35,9 @@
         appearance: none;
         height: var(--input-height);
         border-radius: var(--input-height);
-        /* opacity: 0; */
+        accent-color: blue;
       }
-      
+
       .parent-input::before {
         content: "";
         width: var(--before-width, 0);
