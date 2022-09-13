@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+  <body class="h-screen grid place-items-center bg-gray-500">
+    <div
+      class="parent-input before:w-[50px] before:left-[50%] before:pointer-events-none before:rounded-lg grid relative before:absolute before:top-0 before:h-2 before:bg-red-500"
+    >
+      <input
+        class="h-2 rounded-lg appearance-none"
+        type="range"
+        min="-10"
+        value="0"
+        max="10"
+      />
+    </div>
+
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: grey;
+        display: grid;
+        place-items: center;
+      }
+
+      .parent-input {
+        --input-height: 0.5rem;
+        /* height: var(--input-height); */
+        outline: 1px solid red;
+        position: relative;
+        display: flex;
+      }
+
+      input {
+        appearance: none;
+        height: var(--input-height);
+        border-radius: var(--input-height);
+        /* opacity: 0; */
+      }
+      
+      .parent-input::before {
+        content: "";
+        width: var(--before-width, 0);
+        height: var(--input-height, 0);
+        border-radius: var(--input-height);
+        pointer-events: none;
+        position: absolute;
+        background-color: blue;
+        top: 50%;
+        transform: translateY(-50%);
+        left: var(--before-left, 0);
+      }
+    </style>
+
+    <script src="script.js"></script>
+  </body>
+</html>
