@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+}
+
+.firstpage {
+  position: absolute;
+  background-image: url("https://i.ibb.co/HGSY9Rv/bcb.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  transition: background-position-x 0.5s ease-in-out;
+}
+
+.firstpage:hover {
+  background-position-x: -200px;
+}
