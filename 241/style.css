@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  overflow:hidden; /* for not see the scrollbar */
+}
+
+.firstpage {
+  --x: 200px;
+  position: absolute;
+  background-image: url("https://i.ibb.co/HGSY9Rv/bcb.png");
+  /* not use `attachment: fixed` here */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: calc(100% + var(--x));
+  transition: background-position-x 0.5s ease-in-out;
+}
+
+.firstpage:hover {
+  background-position-x: calc(var(--x) * -1); /* 200px * -1 = -200px */
+}
