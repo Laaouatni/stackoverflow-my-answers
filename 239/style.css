@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+}
+
+.text {
+  position: relative;
+  font-size: 20vmin;
+}
+
+.text::before {
+  content: "";
+  position: absolute;
+  color: red;
+  right: 1ch;
+}
+
+.text0::before {
+  content: "\064E";
+}
+
+.text1::before {
+  content: "\064F";
+}
+
+.text2::before {
+  content: "\0650";
+}
+
+.text3::before {
+  content: "\0651";
+}
+
+.text4::before {
+  content: "\0652";
+}
+
