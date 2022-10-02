@@ -2,7 +2,7 @@ class Coords {
   static array = [];
 
   static translate(dx = 0, dy = 0) {
-    Coords.array.forEach((point) => {
+    this.array.forEach((point) => {
       point.x += dx;
       point.y += dy;
     });
@@ -10,7 +10,7 @@ class Coords {
 
   static rotate(angleDeg = 0) {
     const angleRad = (angleDeg * Math.PI) / 180;
-    Coords.array.forEach((point) => {
+    this.array.forEach((point) => {
       point.x = point.x * Math.cos(angleRad) - point.y * Math.sin(angleRad);
       point.y = point.x * Math.sin(angleRad) + point.y * Math.cos(angleRad);
     });
