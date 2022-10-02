@@ -8,7 +8,7 @@ class Coords {
     });
   }
 
-  static rotate(angleDeg) {
+  static rotate(angleDeg = 0) {
     const angleRad = (angleDeg * Math.PI) / 180;
     Coords.array.forEach((point) => {
       point.x = point.x * Math.cos(angleRad) - point.y * Math.sin(angleRad);
