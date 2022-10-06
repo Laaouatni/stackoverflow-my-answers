@@ -1,0 +1,17 @@
+.container {
+  container-type: inline-size;
+}
+
+.container > * {
+  width: 100%;
+}
+
+@container (width > 600px) {
+  .container button {
+    background-color: red;
+  }
+}
+
+.container button {
+  background-color: lightgreen;
+}
