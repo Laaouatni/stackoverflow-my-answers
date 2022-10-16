@@ -1,0 +1,4 @@
+h1::after {
+  content: "hello world";
+  font-size: var(--fsize);
+}
