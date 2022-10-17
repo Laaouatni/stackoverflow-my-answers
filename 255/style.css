@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+}
+
+form {
+  background: #ccc;
+  gap: 1rem;
+}
+
+form label {
+  background: #fff;
+  place-content: center;
+  border: "5px solid grey";
+}
+
+form,
+label {
+  display: grid;
+  padding: 1rem;
+}
