@@ -1,32 +1,32 @@
-const addBtn = document.getElementById("add");
-const add2Btn = document.getElementById("add2");
-
-const subBtn = document.getElementById("sub");
-const sub2Btn = document.getElementById("sub2");
-
-const qty = document.getElementById("qtyBox");
-const qty2 = document.getElementById("qtyBox2");
-
+const containers = document.querySelectorAll(".container");
 const saveBtn = document.getElementById("save");
 
-const addBtnsArray = [addBtn, add2Btn];
-const subBtnsArray = [subBtn, sub2Btn];
-const qtyArray = [qty, qty2];
+containers.forEach((c, cIndex) => {
+  const subBtns = c.querySelectorAll(".sub");
+  const addBtns = c.querySelectorAll(".add");
+  const qtyInputs = c.querySelectorAll(".qty");
 
-addBtnsArray.forEach((btn) => {
-  btn.onclick = () => {
-    qty.value += 10;
-  };
+  // add
+  addBtns.forEach((btn, btnIndex) => {
+    btn.onclick = () => {
+      qtyInputs[btnIndex].valueAsNumber += 10;
+    };
+  });
+
+  // sub
+  subBtns.forEach((btn, btnIndex) => {
+    btn.onclick = () => {
+      if (qtyInputs[btnIndex].valueAsNumber !== 0) {
+        qtyInputs[btnIndex].valueAsNumber -= 1;
+      }
+    };
+  });
+
+  saveBtn.addEventListener("click", () => {
+    const maxLenght = Math.max(subBtns.length, addBtns.length);
+    for (let btnIndex = 0; btnIndex <= maxLenght; btnIndex++) {
+      console.log(qtyInputs[btnIndex])
+      localStorage.setItem(cIndex, "hello");
+    }
+  });
 });
-
-subBtnsArray.forEach((btn) => {
-  btn.onclick = () => {
-    if (qty.value !== 0) qty.value -= 1;
-  };
-});
-
-saveBtn.onclick = () => {
-  qtyArray.forEach(input => {
-    
-  })
-};
