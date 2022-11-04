@@ -1,0 +1,31 @@
+.has-wavy {
+  position: relative;
+}
+
+.has-wavy::after {
+  --w: 10%;                           /* we will use a css var so we don't repeat code */
+  content: "";
+  height: 100%;                       
+  width: var(--w);                    /* the width is getted from css var */
+  border-radius: 0 100% 100% 0;       /* rounding code is very simple like this, just one line */
+  position: absolute;                 
+  right: calc(-0.5 * var(--w));       /* the rounded part it will be shown out of the element */
+  z-index: -1;                        /* half part isn't used, so we hide it use z-index */
+  background-color: inherit;          /* get the element color that it is used dinamically */
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+}
+
+body *:not(script) {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
