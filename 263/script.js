@@ -29,34 +29,34 @@ function generateGrid(
   function BtnLogic() {
     let lastChanged = {
       container: null,
-      item: null,
+      item: 1,
     };
 
     button.onclick = () => {
-      changeContainerDependsOnSituation();
+      const itemToChange = selectItem();
+      itemToChange.textContent = ++itemToChange.textContent;
 
-      function changeContainerDependsOnSituation() {
-        const sameContainer = () =>
-          updateClassSelector("container", lastChanged, undefined, false);
+      function selectItem() {
         const updateContainer = () => {
-          updateClassSelector("container", lastChanged);
-          lastChanged.item = null;
+          return updateClassSelector("container", lastChanged, true);
         };
 
-        const choosedContainer =
-          lastChanged.item === numItemsPerContainer
-            ? updateContainer()
-            : sameContainer();
-            
-        console.log(updateClassSelector("item", lastChanged, choosedContainer));
-        console.log(lastChanged);
+        // if (lastChanged.container === numContainers) {
+        //   return console.log(updateClassSelector("item", lastChanged, true, updateContainer()));
+        // } else {
+        //   return console.log(updateClassSelector("item", lastChanged, false, updateContainer()));
+        // }
+
+        return lastChanged.container === numContainers
+          ? updateClassSelector("item", lastChanged, true, updateContainer())
+          : updateClassSelector("item", lastChanged, false, updateContainer());
       }
 
       function updateClassSelector(
         classPrefix,
         actualIndex,
-        parent = document,
         canChange = true,
+        parent = document,
       ) {
         if (canChange) {
           return parent.querySelector(
