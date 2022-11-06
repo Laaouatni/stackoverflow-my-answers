@@ -1,3 +1,5 @@
+"use strict";
+
 function generateGrid(
   parentElement = document.body,
   numContainers = 5,
@@ -38,18 +40,33 @@ function generateGrid(
 
       function selectItem() {
         const updateContainer = () => {
-          return updateClassSelector("container", lastChanged, true);
+          return updateClassSelector("container", lastChanged);
         };
 
-        // if (lastChanged.container === numContainers) {
-        //   return console.log(updateClassSelector("item", lastChanged, true, updateContainer()));
-        // } else {
-        //   return console.log(updateClassSelector("item", lastChanged, false, updateContainer()));
-        // }
+        return changeItemBasedOnContainer();
 
-        return lastChanged.container === numContainers
-          ? updateClassSelector("item", lastChanged, true, updateContainer())
-          : updateClassSelector("item", lastChanged, false, updateContainer());
+        function changeItemBasedOnContainer() {
+          console.log(lastChanged);
+
+          if (lastChanged.container === numContainers) {
+            if (lastChanged.item === numItemsPerContainer) {
+              lastChanged.item = null;
+            }
+            return updateClassSelector(
+              "item",
+              lastChanged,
+              true,
+              updateContainer(),
+            );
+          } else {
+            return updateClassSelector(
+              "item",
+              lastChanged,
+              false,
+              updateContainer(),
+            );
+          }
+        }
       }
 
       function updateClassSelector(
