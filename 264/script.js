@@ -39,22 +39,22 @@ function generateGrid(menuData, parent) {
   let total = 0;
 
   menuData.forEach((menuItem) => {
-    const div = document.createElement("div");
+    const btn = document.createElement("button");
     const h3 = document.createElement("h3");
 
-    div.appendChild(h3);
-    parent.appendChild(div);
+    btn.appendChild(h3);
+    parent.appendChild(btn);
     
     h3.textContent = menuItem.name;
 
-    div.addEventListener("click", () => {
+    btn.addEventListener("click", () => {
       const priceEl = document.getElementById("price");
       const totalEl = document.getElementById("total");
 
       total += menuItem.price;
 
-      priceEl.textContent = `price: ${menuItem.price}`;
-      totalEl.textContent = `total: ${total}`;
+      priceEl.textContent = menuItem.price;
+      totalEl.textContent = total;
     });
   });
 }
