@@ -35,10 +35,10 @@ const menuData = [
 
 generateGrid(menuData, document.querySelector(".icons-container"));
 
-function generateGrid(itemsData, parent) {
+function generateGrid(menuData, parent) {
   let total = 0;
 
-  itemsData.forEach((menuItem) => {
+  menuData.forEach((menuItem) => {
     const div = document.createElement("div");
     const h3 = document.createElement("h3");
 
