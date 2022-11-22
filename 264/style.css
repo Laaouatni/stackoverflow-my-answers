@@ -1,0 +1,10 @@
+.icons-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.2rem;
+}
+
+.icons-container div {
+  background: orange;
+  text-align: center
+}
