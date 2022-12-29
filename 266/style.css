@@ -1,0 +1,31 @@
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: rgb(180, 180, 180);
+  min-height: 100vh;
+}
+
+video {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  top: 0;
+}
+
+footer {
+  bottom: 0;
+}
+
+nav,
+footer {
+  position: fixed;
+  background: white;
+  padding: 1rem;
+}
