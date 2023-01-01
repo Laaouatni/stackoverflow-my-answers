@@ -3,57 +3,47 @@
   let array = mathToJson(formula);
 
   function mathToJson(string) {
-    const noSpace = string.replace(/\s+/g, "");
+    let noSpace = string.replace(/ /g, "");
 
-    console.log("brakets", getTextInsideBrackets(noSpace));
-    console.log("split", splitTextBetweenMultDiv(noSpace));
+    const REGEX = {
+      addition: /\+[^+()]*(?:\([^()]*\))?/g,
+    };
 
-    function splitTextBetweenMultDiv(string) {
-      let isOpen = false;
-      let index = 0;
-      const MAX = string.length;
+    function getAdditionArray(string) {
+      if (string[0] !== "-") string = "+" + string;
 
-      while (index < MAX) {
-        const character = string[index];
+      const arrayResult = string.match(REGEX.addition).map((item) => {
+        if (item[0] === "+") return item.slice(1);
+        return item;
+      });
 
-        if (character === "(") {
-          isOpen = true;
-        } else if (character === ")") {
-          isOpen = false;
-        }
+      return {
+        values: arrayResult,
+        operation: "+",
+      };
+    }
 
-        if (!isOpen) {
-          if (["/", "*"].includes(character)) {
-            return [string.slice(0, index), string.slice(index + 1)];
-          }
-        }
-
-        index++;
+    function recursion(array) {
+      if (REGEX.addition.test(string)) {
+        return array.map((item) => {
+          return getAdditionArray(item);
+        });
       }
     }
 
-    function getTextInsideBrackets(string) {
-      let ResultArray = [];
-      let thisString = [];
-      let isOpen = false;
+    console.log(recursion(getAdditionArray(noSpace).values));
 
-      string.split("").forEach((character) => {
-        if (character === "(") {
-          isOpen = true;
-        } else if (character === ")") {
-          isOpen = false;
-          ResultArray.push(thisString.join(""));
-          thisString = [];
-        }
+    function getSubtractionArray(string) {
+      const REGEX = /\-[^-()]*(?:\([^()]*\))?/g;
+      if (string[0] !== "-") string = "+" + string;
+      return string.match(REGEX);
+    }
 
-        if (isOpen) {
-          if (character !== "(") {
-            thisString.push(character);
-          }
-        }
+    function getBracketsArray(string) {
+      const REGEX = /\(|\)/g;
+      return string.split(REGEX).filter((item) => {
+        if (item !== "") return item;
       });
-
-      return ResultArray;
     }
   }
 </script>
@@ -67,3 +57,5 @@
     </div>
   {/each}
 </div> -->
+
+hello
