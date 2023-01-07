@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- HTML file input element -->
+    <input type="file" />
+
+    <script>
+      const NUMBER_OF_THE_LINE = 2; // change this to the line number you want to read
+
+      let myLine = readLineNumber(NUMBER_OF_THE_LINE).then(
+        (res) => console.log(res), // your code (change here the code using the "res" variable)
+      );
+
+      // don't change the code below... it's just a helper function
+
+      async function readLineNumber(n) {
+        // Select the file input element (select the first one if there are multiple)
+        // you can use id="" or class="" to select the element if you want, but this is the easiest if there isn't any other input element
+        const fileInput = document.querySelector("input[type=file]");
+
+        return new Promise((resolve, reject) => {
+          // Set up an event listener that will be triggered when the file input value changes (i.e. when a file is selected)
+          fileInput.addEventListener(
+            "change",
+            () => {
+              // Get the selected file
+              const file = fileInput.files[0];
+
+              // Create a new FileReader object
+              const reader = new FileReader();
+
+              // Read the file as text
+              reader.readAsText(file);
+
+              // When the file is read, do something with it
+              reader.onload = () => {
+                // Split the file into an array of lines
+                const lines = reader.result.split("\n");
+
+                resolve(lines[n]);
+              };
+            },
+            {
+              once: true,
+            },
+          );
+        });
+      }
+    </script>
+  </body>
+</html>
