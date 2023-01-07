@@ -10,9 +10,10 @@
     <script>
       const NUMBER_OF_THE_LINE = 2; // change this to the line number you want to read
 
-      let myLine = readLineNumber(NUMBER_OF_THE_LINE).then(
-        (res) => console.log(res), // your code (change here the code using the "res" variable)
-      );
+      readLineNumber(NUMBER_OF_THE_LINE).then((result) => {
+        console.log(result);
+        // your code (change here the code using the "res" variable)
+      });
 
       // don't change the code below... it's just a helper function
 
@@ -44,7 +45,7 @@
               };
             },
             {
-              once: true,
+              once: true, // Remove the event listener after it's triggered
             },
           );
         });
