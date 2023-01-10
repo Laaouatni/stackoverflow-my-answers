@@ -1,0 +1,22 @@
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  background: #d3d3d784;
+  height: 300px;
+  padding: 20px;
+}
+
+.cards .card {
+  background: rgba(246, 227, 227, 0.1);
+  display: flex;
+  max-width: 500px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}

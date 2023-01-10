@@ -1,0 +1,1 @@
+<button class="bg-pink-400 text-white hover:bg-pink-500 hover:shadow-lg hover:scale-110 transition py-2 px-4 rounded-md my-4">Plus d'infos</button>
