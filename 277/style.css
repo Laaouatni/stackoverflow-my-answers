@@ -1,0 +1,11 @@
+.popup-container {
+  position: relative;
+}
+
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vh;
+  transition-duration: calc(var(--i) * 0.02s); /* here magic happens */
+}

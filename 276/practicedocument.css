@@ -1,0 +1,42 @@
+body {
+  font-size: 20px;
+  text-align: center;
+  margin: 0 auto;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: rgb(216, 216, 216);
+}
+
+img {
+  max-block-size: 30px;
+}
+
+header {
+  padding: 30px;
+  background-color: rgb(2, 171, 177);
+  margin-bottom: 35px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.grid-main {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-main .prominant {
+  background-color: rgb(63, 11, 11);
+  grid-row-start: span 2;
+}
+
+.grid-main div {
+  background-color: rgb(65, 82, 82);
+  border: 10px;
+}
+
+footer {
+  padding: 50px;
+  background-color: rgb(75, 66, 54);
+  margin-top: 50px;
+  /* margin-bottom: ; */
+}
